@@ -5,7 +5,7 @@ export const trustLevels: TrustLevelConfig[] = [
     level: 'Listener',
     minPoints: 0,
     maxPoints: 99,
-    color: '#7ab8c8',
+    color: '#38c8b0',
     description:
       'You\'ve joined the circle. You\'re here, present, and that matters. Take your time. Read, listen, and when you\'re ready — share.',
     perks: [
@@ -19,7 +19,7 @@ export const trustLevels: TrustLevelConfig[] = [
     level: 'Contributor',
     minPoints: 100,
     maxPoints: 499,
-    color: '#e0b848',
+    color: '#e8b030',
     description:
       'You\'ve begun to give as well as receive. Your presence is being felt. The community is learning from you.',
     perks: [
@@ -34,7 +34,7 @@ export const trustLevels: TrustLevelConfig[] = [
     level: 'Guide',
     minPoints: 500,
     maxPoints: 1499,
-    color: '#9b7fd4',
+    color: '#f090a8',
     description:
       'You\'ve walked enough miles to help others find their footing. Your lived experience is a gift. People seek you out.',
     perks: [
@@ -50,7 +50,7 @@ export const trustLevels: TrustLevelConfig[] = [
     level: 'Trusted Guide',
     minPoints: 1500,
     maxPoints: 2999,
-    color: '#d4607a',
+    color: '#e06080',
     description:
       'The community trusts you. Not because you\'re perfect, but because you\'ve been consistent, humble, and genuinely helpful over time.',
     perks: [
@@ -66,7 +66,7 @@ export const trustLevels: TrustLevelConfig[] = [
     level: 'Community Steward',
     minPoints: 3000,
     maxPoints: null,
-    color: '#f0c060',
+    color: '#f0c040',
     description:
       'You are the community. You\'ve shown over time that you are here not for recognition, but for the work. You help hold this space so others can heal.',
     perks: [

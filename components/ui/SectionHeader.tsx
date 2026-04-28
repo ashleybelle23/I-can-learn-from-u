@@ -20,12 +20,12 @@ export function SectionHeader({
       ? 'text-gradient-gold'
       : titleGradient === 'lavender'
       ? 'text-gradient-lavender'
-      : 'text-[#ede8f8]';
+      : 'text-[#1e1428]';
 
   return (
     <div className={`${centered ? 'text-center' : ''} ${className}`}>
       {eyebrow && (
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#d4a843] mb-3">
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e8b030] mb-3">
           {eyebrow}
         </p>
       )}
@@ -33,7 +33,7 @@ export function SectionHeader({
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-[#8aaa74] text-base md:text-lg leading-relaxed max-w-2xl">
+        <p className="mt-4 text-[#48c8b0] text-base md:text-lg leading-relaxed max-w-2xl">
           {description}
         </p>
       )}

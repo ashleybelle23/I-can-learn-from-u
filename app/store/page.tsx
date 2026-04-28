@@ -13,9 +13,9 @@ export default function StorePage() {
   const all = mockProducts;
 
   return (
-    <div className="bg-[#09071c] min-h-screen">
+    <div className="bg-[#fdf5f8] min-h-screen">
       {/* Header */}
-      <div className="border-b border-[#3c3070]/60 bg-[#181440]/40">
+      <div className="border-b border-[#e8b8cc]/60 bg-[#fce8f0]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SectionHeader
             eyebrow="Store"
@@ -30,7 +30,7 @@ export default function StorePage() {
         {/* Featured */}
         {featured.length > 0 && (
           <div>
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#d4a843] mb-6">
+            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e8b030] mb-6">
               Staff picks
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -43,7 +43,7 @@ export default function StorePage() {
 
         {/* All products */}
         <div>
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#d4a843] mb-6">
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e8b030] mb-6">
             All products
           </p>
           {/* TODO: Add category filter client component */}

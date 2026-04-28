@@ -6,32 +6,32 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Cosmic dark — ODESZA + ketamine therapy palette */
-  --color-bg-base: #09071c;
-  --color-bg-warm: #0e0b24;
-  --color-surface: #181440;
-  --color-surface-2: #201c48;
-  --color-surface-3: #261f52;
-  --color-border-light: #2c2458;
-  --color-border: #3c3070;
-  --color-border-strong: #4a3c88;
+  /* Light pink, yellow, teal — soft and dreamy */
+  --color-bg-base: #fdf5f8;
+  --color-bg-warm: #faf0f5;
+  --color-surface: #fce8f0;
+  --color-surface-2: #f8dce8;
+  --color-surface-3: #f4d0e0;
+  --color-border-light: #f0c8d8;
+  --color-border: #e8b8cc;
+  --color-border-strong: #dca0b8;
 
-  --color-text-primary: #ede8f8;
-  --color-text-secondary: #c8b8f0;
-  --color-text-muted: #9080c0;
-  --color-text-soft: #6858a0;
+  --color-text-primary: #1e1428;
+  --color-text-secondary: #6a3858;
+  --color-text-muted: #b890a0;
+  --color-text-soft: #d8b0c4;
 
-  --color-amber: #d4a843;
-  --color-amber-bright: #e8c060;
-  --color-violet: #9b7fd4;
-  --color-rose: #d4607a;
-  --color-teal: #6aaa80;
-  --color-sage: #8aaa74;
+  --color-teal: #38c8b0;
+  --color-teal-light: #60d8c4;
+  --color-yellow: #f0c040;
+  --color-yellow-light: #f8d870;
+  --color-pink: #f090a8;
+  --color-pink-deep: #e06080;
 }
 
 :root {
-  --background: #09071c;
-  --foreground: #ede8f8;
+  --background: #fdf5f8;
+  --foreground: #1e1428;
 }
 
 body {
@@ -46,77 +46,66 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #181440;
+  background: #fce8f0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3c3070;
+  background: #e8b8cc;
   border-radius: 3px;
 }
 
 ::selection {
-  background: #9b7fd4;
-  color: #ede8f8;
+  background: #f8b8d0;
+  color: #1e1428;
 }
 
 :focus-visible {
-  outline: 2px solid #d4a843;
+  outline: 2px solid #38c8b0;
   outline-offset: 2px;
 }
 
-/* ODESZA + ketamine hero — amber concert light, violet nebula, deep cosmic indigo */
+/* Dreamy pink-yellow-teal gradient hero */
 .gradient-hero {
   background:
-    radial-gradient(ellipse at 8% 58%, rgba(155, 80, 224, 0.50) 0%, transparent 50%),
-    radial-gradient(ellipse at 90% 10%, rgba(212, 168, 67, 0.45) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 95%, rgba(60, 100, 210, 0.30) 0%, transparent 42%),
-    radial-gradient(ellipse at 32% 22%, rgba(200, 60, 140, 0.18) 0%, transparent 35%),
-    radial-gradient(ellipse at 75% 65%, rgba(100, 60, 200, 0.22) 0%, transparent 40%),
-    linear-gradient(160deg, #09071c 0%, #100d2a 50%, #0c0a20 100%);
+    radial-gradient(ellipse at 15% 65%, rgba(248, 160, 190, 0.52) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 12%, rgba(248, 216, 80, 0.48) 0%, transparent 45%),
+    radial-gradient(ellipse at 55% 92%, rgba(72, 200, 176, 0.42) 0%, transparent 45%),
+    radial-gradient(ellipse at 38% 28%, rgba(240, 144, 168, 0.18) 0%, transparent 35%),
+    linear-gradient(160deg, #fdf5f8 0%, #fef8f2 50%, #f5fdf9 100%);
 }
 
-/* Warm amber gradient text — ODESZA glow */
+/* Gradient text — teal to yellow to pink */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #e8c060, #d4a843, #bf8030);
+  background: linear-gradient(135deg, #38c8b0, #f0c040, #f090a8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Violet cosmic gradient */
+/* Soft pink gradient text */
 .text-gradient-lavender {
-  background: linear-gradient(135deg, #b89ae8, #9b7fd4, #7858b8);
+  background: linear-gradient(135deg, #f090a8, #e06080);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Amber glow — like a beam of ODESZA concert light */
+/* Soft teal glow */
 .glow-gold {
-  box-shadow:
-    0 0 40px rgba(212, 168, 67, 0.18),
-    0 0 80px rgba(212, 168, 67, 0.08),
-    0 4px 24px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 40px rgba(56, 200, 176, 0.14), 0 2px 12px rgba(240, 192, 64, 0.10);
 }
 
-/* Violet glow — dreamy, floaty */
-.glow-violet {
-  box-shadow:
-    0 0 40px rgba(155, 127, 212, 0.22),
-    0 0 80px rgba(155, 127, 212, 0.10);
-}
-
-/* Dark glass card */
+/* Light glass card */
 .card-glass {
-  background: rgba(24, 20, 64, 0.85);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(60, 48, 112, 0.5);
+  background: rgba(253, 245, 248, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(232, 184, 204, 0.5);
 }
 
-/* Tag pill — violet tint on dark */
+/* Tag pill — teal tint on light bg */
 .tag-pill {
-  background: rgba(155, 127, 212, 0.15);
-  color: #b89ae8;
-  border: 1px solid rgba(155, 127, 212, 0.28);
+  background: rgba(56, 200, 176, 0.10);
+  color: #28a090;
+  border: 1px solid rgba(56, 200, 176, 0.25);
   padding: 2px 10px;
   border-radius: 9999px;
   font-size: 0.7rem;
@@ -126,19 +115,19 @@ body {
 
 /* Body text in cards/replies */
 .prose-brand {
-  color: #c8b8f0;
+  color: #6a3858;
   line-height: 1.75;
 }
 
 /* Urgency border accents */
 .urgency-high {
-  border-left: 3px solid #f06060;
+  border-left: 3px solid #e04060;
 }
 
 .urgency-medium {
-  border-left: 3px solid #d4a843;
+  border-left: 3px solid #e8a820;
 }
 
 .urgency-low {
-  border-left: 3px solid #6aaa80;
+  border-left: 3px solid #38c8b0;
 }

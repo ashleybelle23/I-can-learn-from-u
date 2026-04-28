@@ -25,12 +25,12 @@ export function PostCard({ post, compact = false }: PostCardProps) {
   return (
     <Link
       href={`/community/${post.id}`}
-      className={`block rounded-2xl border bg-[#181440]/60 hover:bg-[#181440] transition-all duration-200 group ${
+      className={`block rounded-2xl border bg-[#fce8f0]/60 hover:bg-[#fce8f0] transition-all duration-200 group ${
         post.urgency === 'high'
           ? 'border-red-800/40 urgency-high'
           : post.urgency === 'medium'
-          ? 'border-[#3c3070] urgency-medium'
-          : 'border-[#3c3070] urgency-low'
+          ? 'border-[#e8b8cc] urgency-medium'
+          : 'border-[#e8b8cc] urgency-low'
       }`}
     >
       <div className="p-5">
@@ -40,22 +40,22 @@ export function PostCard({ post, compact = false }: PostCardProps) {
             <UrgencyBadge urgency={post.urgency} />
             <CategoryBadge>{post.category}</CategoryBadge>
             {post.pinned && (
-              <span className="text-xs text-[#d4a843] font-medium flex items-center gap-1">
+              <span className="text-xs text-[#e8b030] font-medium flex items-center gap-1">
                 ✦ Pinned
               </span>
             )}
           </div>
-          <span className="text-xs text-[#9080c0] flex-shrink-0">{timeAgo(post.createdAt)}</span>
+          <span className="text-xs text-[#b890a0] flex-shrink-0">{timeAgo(post.createdAt)}</span>
         </div>
 
         {/* Title */}
-        <h3 className="text-base font-semibold text-[#ede8f8] group-hover:text-[#d4a843] transition-colors leading-snug mb-2">
+        <h3 className="text-base font-semibold text-[#1e1428] group-hover:text-[#e8b030] transition-colors leading-snug mb-2">
           {post.title}
         </h3>
 
         {/* Body excerpt */}
         {!compact && (
-          <p className="text-sm text-[#9080c0] leading-relaxed line-clamp-2 mb-4">
+          <p className="text-sm text-[#b890a0] leading-relaxed line-clamp-2 mb-4">
             {post.body}
           </p>
         )}
@@ -70,17 +70,17 @@ export function PostCard({ post, compact = false }: PostCardProps) {
         )}
 
         {/* Footer */}
-        <div className="flex items-center justify-between pt-3 border-t border-[#3c3070]/40">
+        <div className="flex items-center justify-between pt-3 border-t border-[#e8b8cc]/40">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-[#201c48] flex items-center justify-center text-xs font-semibold text-[#c8b8f0] flex-shrink-0">
+            <div className="w-7 h-7 rounded-full bg-[#f8dce8] flex items-center justify-center text-xs font-semibold text-[#6a3858] flex-shrink-0">
               {post.author.name.charAt(0)}
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="text-xs text-[#8aaa74] font-medium">{post.author.name}</span>
+              <span className="text-xs text-[#48c8b0] font-medium">{post.author.name}</span>
               <TrustBadge level={post.author.trustLevel} />
             </div>
           </div>
-          <div className="flex items-center gap-4 text-xs text-[#9080c0]">
+          <div className="flex items-center gap-4 text-xs text-[#b890a0]">
             <span className="flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />

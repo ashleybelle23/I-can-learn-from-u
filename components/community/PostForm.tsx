@@ -37,17 +37,17 @@ export function PostForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-[#d4a843]/30 bg-[#d4a843]/5 p-8 text-center">
-        <div className="w-12 h-12 rounded-full bg-[#d4a843]/20 flex items-center justify-center mx-auto mb-4">
+      <div className="rounded-2xl border border-[#e8b030]/30 bg-[#e8b030]/5 p-8 text-center">
+        <div className="w-12 h-12 rounded-full bg-[#e8b030]/20 flex items-center justify-center mx-auto mb-4">
           <span className="text-2xl">✦</span>
         </div>
-        <h3 className="text-lg font-semibold text-[#ede8f8] mb-2">Your post has been shared</h3>
-        <p className="text-sm text-[#8aaa74]">
+        <h3 className="text-lg font-semibold text-[#1e1428] mb-2">Your post has been shared</h3>
+        <p className="text-sm text-[#48c8b0]">
           The community will receive it with care. You are not alone.
         </p>
         <button
           onClick={() => { setSubmitted(false); setTitle(''); setBody(''); setCategory(''); setUrgency('medium'); }}
-          className="mt-5 text-sm text-[#d4a843] hover:underline"
+          className="mt-5 text-sm text-[#e8b030] hover:underline"
         >
           Post again
         </button>
@@ -58,7 +58,7 @@ export function PostForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="post-title" className="block text-sm font-medium text-[#c8b8f0] mb-2">
+        <label htmlFor="post-title" className="block text-sm font-medium text-[#6a3858] mb-2">
           What are you navigating?
         </label>
         <input
@@ -68,12 +68,12 @@ export function PostForm() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Give your post a brief, honest title"
           required
-          className="w-full px-4 py-3 rounded-xl bg-[#181440] border border-[#3c3070] text-[#ede8f8] placeholder-[#9080c0] text-sm focus:outline-none focus:border-[#8aaa74] transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-[#fce8f0] border border-[#e8b8cc] text-[#1e1428] placeholder-[#b890a0] text-sm focus:outline-none focus:border-[#48c8b0] transition-colors"
         />
       </div>
 
       <div>
-        <label htmlFor="post-body" className="block text-sm font-medium text-[#c8b8f0] mb-2">
+        <label htmlFor="post-body" className="block text-sm font-medium text-[#6a3858] mb-2">
           Share as much or as little as you&apos;re ready to
         </label>
         <textarea
@@ -83,12 +83,12 @@ export function PostForm() {
           placeholder="What's happening? What do you need? This is a safe space."
           required
           rows={5}
-          className="w-full px-4 py-3 rounded-xl bg-[#181440] border border-[#3c3070] text-[#ede8f8] placeholder-[#9080c0] text-sm focus:outline-none focus:border-[#8aaa74] transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-[#fce8f0] border border-[#e8b8cc] text-[#1e1428] placeholder-[#b890a0] text-sm focus:outline-none focus:border-[#48c8b0] transition-colors resize-none"
         />
       </div>
 
       <div>
-        <label htmlFor="category" className="block text-sm font-medium text-[#c8b8f0] mb-2">
+        <label htmlFor="category" className="block text-sm font-medium text-[#6a3858] mb-2">
           Category
         </label>
         <select
@@ -96,7 +96,7 @@ export function PostForm() {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           required
-          className="w-full px-4 py-3 rounded-xl bg-[#181440] border border-[#3c3070] text-[#ede8f8] text-sm focus:outline-none focus:border-[#8aaa74] transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-[#fce8f0] border border-[#e8b8cc] text-[#1e1428] text-sm focus:outline-none focus:border-[#48c8b0] transition-colors"
         >
           <option value="" disabled>Select the closest category</option>
           {mockCategories.map((cat) => (
@@ -106,15 +106,15 @@ export function PostForm() {
       </div>
 
       <div>
-        <p className="text-sm font-medium text-[#c8b8f0] mb-3">Urgency level</p>
+        <p className="text-sm font-medium text-[#6a3858] mb-3">Urgency level</p>
         <div className="space-y-2">
           {urgencyOptions.map((opt) => (
             <label
               key={opt.value}
               className={`flex items-start gap-3 p-3 rounded-xl border cursor-pointer transition-all ${
                 urgency === opt.value
-                  ? 'border-[#8aaa74]/50 bg-[#201c48]/30'
-                  : 'border-[#3c3070] hover:border-[#3c3070]'
+                  ? 'border-[#48c8b0]/50 bg-[#f8dce8]/30'
+                  : 'border-[#e8b8cc] hover:border-[#e8b8cc]'
               }`}
             >
               <input
@@ -123,26 +123,26 @@ export function PostForm() {
                 value={opt.value}
                 checked={urgency === opt.value}
                 onChange={() => setUrgency(opt.value)}
-                className="mt-0.5 accent-[#d4a843]"
+                className="mt-0.5 accent-[#e8b030]"
               />
               <div>
-                <p className="text-sm font-medium text-[#ede8f8]">{opt.label}</p>
-                <p className="text-xs text-[#9080c0]">{opt.description}</p>
+                <p className="text-sm font-medium text-[#1e1428]">{opt.label}</p>
+                <p className="text-xs text-[#b890a0]">{opt.description}</p>
               </div>
             </label>
           ))}
         </div>
       </div>
 
-      <div className="p-4 rounded-xl bg-[#181440]/60 border border-[#3c3070]/40">
-        <p className="text-xs text-[#9080c0] leading-relaxed">
-          <strong className="text-[#c8b8f0]">Community reminder:</strong> This is peer support — people who care, not licensed professionals. For emergencies, please call 911 or 988. Be kind with yourself and others.
+      <div className="p-4 rounded-xl bg-[#fce8f0]/60 border border-[#e8b8cc]/40">
+        <p className="text-xs text-[#b890a0] leading-relaxed">
+          <strong className="text-[#6a3858]">Community reminder:</strong> This is peer support — people who care, not licensed professionals. For emergencies, please call 911 or 988. Be kind with yourself and others.
         </p>
       </div>
 
       <button
         type="submit"
-        className="w-full py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#d4a843] to-[#bf8030] text-[#09071c] hover:opacity-90 transition-opacity"
+        className="w-full py-3.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-[#e8b030] to-[#c89020] text-[#fdf5f8] hover:opacity-90 transition-opacity"
       >
         Share with the community
       </button>
