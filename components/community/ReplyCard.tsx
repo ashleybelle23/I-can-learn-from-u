@@ -22,15 +22,15 @@ export function ReplyCard({ reply }: ReplyCardProps) {
     <div
       className={`rounded-2xl border p-5 transition-colors ${
         reply.markedHelpful
-          ? 'border-[#e8b030]/30 bg-[#e8b030]/5'
-          : 'border-[#e8b8cc]/60 bg-[#fce8f0]/40'
+          ? 'border-[#c89040]/30 bg-[#c89040]/5'
+          : 'border-[#3a2d78]/60 bg-[#130f30]/40'
       }`}
     >
       {/* Marked helpful indicator */}
       {reply.markedHelpful && (
         <div className="flex items-center gap-1.5 mb-3">
-          <span className="text-[#e8b030] text-xs">✦</span>
-          <span className="text-xs font-semibold text-[#e8b030]">Marked as helpful</span>
+          <span className="text-[#c89040] text-xs">✦</span>
+          <span className="text-xs font-semibold text-[#c89040]">Marked as helpful</span>
         </div>
       )}
 
@@ -45,15 +45,15 @@ export function ReplyCard({ reply }: ReplyCardProps) {
       {/* Author */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-full bg-[#f8dce8] flex items-center justify-center text-sm font-semibold text-[#6a3858] flex-shrink-0">
+          <div className="w-9 h-9 rounded-full bg-[#1a1640] flex items-center justify-center text-sm font-semibold text-[#a898d8] flex-shrink-0">
             {reply.author.name.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-[#1e1428]">{reply.author.name}</span>
+              <span className="text-sm font-medium text-[#e8e4f8]">{reply.author.name}</span>
               <TrustBadge level={reply.author.trustLevel} />
             </div>
-            <span className="text-xs text-[#b890a0]">{timeAgo(reply.createdAt)}</span>
+            <span className="text-xs text-[#6858a8]">{timeAgo(reply.createdAt)}</span>
           </div>
         </div>
       </div>
@@ -64,19 +64,19 @@ export function ReplyCard({ reply }: ReplyCardProps) {
       </div>
 
       {/* Actions */}
-      <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#e8b8cc]/40">
-        <button className="flex items-center gap-1.5 text-xs text-[#b890a0] hover:text-[#e8b030] transition-colors">
+      <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#3a2d78]/40">
+        <button className="flex items-center gap-1.5 text-xs text-[#6858a8] hover:text-[#c89040] transition-colors">
           {/* TODO: Connect to upvote action */}
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
           </svg>
           {reply.upvotes} helpful
         </button>
-        <button className="text-xs text-[#b890a0] hover:text-[#6a3858] transition-colors">
+        <button className="text-xs text-[#6858a8] hover:text-[#a898d8] transition-colors">
           {/* TODO: Connect to save/bookmark action */}
           Save
         </button>
-        <button className="text-xs text-[#b890a0] hover:text-red-400 transition-colors ml-auto">
+        <button className="text-xs text-[#6858a8] hover:text-red-400 transition-colors ml-auto">
           {/* TODO: Connect to report moderation flow */}
           Report
         </button>

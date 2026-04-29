@@ -1,10 +1,10 @@
 import { Badge } from '@/lib/types';
 
 const rarityColors = {
-  common: '#38c8b0',
-  uncommon: '#e8b030',
-  rare: '#f090a8',
-  legendary: '#f0c040',
+  common: '#2cd4f0',
+  uncommon: '#5090e8',
+  rare: '#9070e8',
+  legendary: '#c89040',
 };
 
 const rarityLabels = {
@@ -22,7 +22,7 @@ export function BadgeCard({ badge, earned = false }: { badge: Badge; earned?: bo
       className={`rounded-xl border p-4 text-center transition-all ${
         earned
           ? 'border-opacity-40 bg-opacity-10'
-          : 'border-[#e8b8cc]/40 bg-[#fce8f0]/20 opacity-40 grayscale'
+          : 'border-[#3a2d78]/40 bg-[#130f30]/40 opacity-40 grayscale'
       }`}
       style={
         earned
@@ -38,25 +38,25 @@ export function BadgeCard({ badge, earned = false }: { badge: Badge; earned?: bo
         style={
           earned
             ? { backgroundColor: `${color}20`, color }
-            : { backgroundColor: '#e8b8cc', color: '#9a6880' }
+            : { backgroundColor: '#3a2d78', color: '#7868b8' }
         }
       >
         {badge.icon}
       </div>
-      <h4 className="text-xs font-semibold text-[#1e1428] mb-1">{badge.name}</h4>
-      <p className="text-xs text-[#b890a0] leading-relaxed mb-2">{badge.description}</p>
+      <h4 className="text-xs font-semibold text-[#e8e4f8] mb-1">{badge.name}</h4>
+      <p className="text-xs text-[#6858a8] leading-relaxed mb-2">{badge.description}</p>
       <span
         className="text-xs font-medium px-2 py-0.5 rounded-full"
         style={
           earned
             ? { color, backgroundColor: `${color}15` }
-            : { color: '#9a6880', backgroundColor: '#fce8f0' }
+            : { color: '#7868b8', backgroundColor: '#130f30' }
         }
       >
         {rarityLabels[badge.rarity]}
       </span>
       {!earned && (
-        <p className="text-xs text-[#9a6880] mt-2">Not yet earned</p>
+        <p className="text-xs text-[#7868b8] mt-2">Not yet earned</p>
       )}
     </div>
   );

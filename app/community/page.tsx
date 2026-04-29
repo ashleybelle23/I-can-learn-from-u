@@ -15,18 +15,18 @@ export default function CommunityPage() {
   const rest = mockPosts.filter((p) => p.urgency !== "high");
 
   return (
-    <div className="bg-[#fdf5f8] min-h-screen">
+    <div className="bg-[#07051a] min-h-screen">
       {/* Header */}
-      <div className="border-b border-[#e8b8cc]/60 bg-[#fce8f0]/40">
+      <div className="border-b border-[#3a2d78]/60 bg-[#130f30]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <SectionHeader
             eyebrow="Community"
             title="You are not alone in this"
             description="This is peer support — people who have walked through hard things showing up for others walking through them now. Not prescriptions. Presence."
           />
-          <div className="mt-6 p-4 rounded-xl border border-amber-400/40 bg-amber-50/80 max-w-2xl">
-            <p className="text-sm text-amber-800/80 leading-relaxed">
-              <strong className="text-amber-800">Important:</strong> This community provides peer support, not professional mental health care. If you or someone you know is in immediate danger, please call 911 or 988 (Suicide &amp; Crisis Lifeline).
+          <div className="mt-6 p-4 rounded-xl border border-[#c89040]/25 bg-[#c89040]/06 max-w-2xl">
+            <p className="text-sm text-[#a898d8] leading-relaxed">
+              <strong className="text-[#d4a840]">Important:</strong> This community provides peer support, not professional mental health care. If you or someone you know is in immediate danger, please call 911 or 988 (Suicide &amp; Crisis Lifeline).
             </p>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function CommunityPage() {
 
             {/* All posts */}
             <div>
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e8b030] mb-4">
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#c89040] mb-4">
                 Community posts
               </p>
               <div className="space-y-4">
@@ -70,20 +70,20 @@ export default function CommunityPage() {
             <EmergencyPanel />
 
             {/* Post form */}
-            <div className="rounded-2xl border border-[#e8b8cc]/60 bg-[#fce8f0]/40 p-6">
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#e8b030] mb-1">
+            <div className="rounded-2xl border border-[#3a2d78]/60 bg-[#130f30]/40 p-6">
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#c89040] mb-1">
                 Share your situation
               </p>
-              <p className="text-sm text-[#b890a0] mb-5">
+              <p className="text-sm text-[#6858a8] mb-5">
                 The community is here. You don&apos;t have to carry this alone.
               </p>
               <PostForm />
             </div>
 
             {/* Community guidelines */}
-            <div className="rounded-2xl border border-[#e8b8cc]/40 bg-[#fce8f0]/30 p-5">
-              <p className="text-xs font-semibold text-[#6a3858] mb-3">Community values</p>
-              <ul className="space-y-2 text-xs text-[#b890a0]">
+            <div className="rounded-2xl border border-[#3a2d78]/40 bg-[#130f30]/30 p-5">
+              <p className="text-xs font-semibold text-[#a898d8] mb-3">Community values</p>
+              <ul className="space-y-2 text-xs text-[#6858a8]">
                 {[
                   "Speak from your own experience",
                   "Witness first, advise second",
@@ -93,14 +93,14 @@ export default function CommunityPage() {
                   "Report harmful content immediately",
                 ].map((v) => (
                   <li key={v} className="flex items-start gap-2">
-                    <span className="text-[#e8b030] mt-0.5">·</span>
+                    <span className="text-[#c89040] mt-0.5">·</span>
                     {v}
                   </li>
                 ))}
               </ul>
               <Link
                 href="/resources#guidelines"
-                className="mt-4 block text-xs text-[#48c8b0] hover:text-[#6a3858] transition-colors"
+                className="mt-4 block text-xs text-[#2cd4f0] hover:text-[#a898d8] transition-colors"
               >
                 Read full community guidelines →
               </Link>

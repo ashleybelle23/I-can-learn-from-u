@@ -23,11 +23,11 @@ export function EmergencyPanel() {
         {emergencyResources.slice(0, 3).map((resource) => (
           <div
             key={resource.name}
-            className="flex items-center justify-between p-3 rounded-xl bg-[#fdf5f8]/60 border border-red-900/30 gap-4"
+            className="flex items-center justify-between p-3 rounded-xl bg-[#07051a]/60 border border-red-900/30 gap-4"
           >
             <div className="min-w-0">
               <p className="text-xs font-semibold text-red-200">{resource.name}</p>
-              <p className="text-xs text-[#b890a0] mt-0.5 truncate">{resource.hours}</p>
+              <p className="text-xs text-[#6858a8] mt-0.5 truncate">{resource.hours}</p>
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
               {resource.phone && (
