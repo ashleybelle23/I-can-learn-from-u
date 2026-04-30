@@ -46,13 +46,13 @@ export default async function PostDetailPage({
   if (!post) notFound();
 
   return (
-    <div className="bg-[#07051a] min-h-screen">
+    <div className="bg-[transparent] min-h-screen">
       {/* Back nav */}
-      <div className="border-b border-[#3a2d78]/40">
+      <div className="border-b border-[#ffffff]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/community"
-            className="inline-flex items-center gap-2 text-sm text-[#6858a8] hover:text-[#a898d8] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -68,36 +68,36 @@ export default async function PostDetailPage({
           <div className="lg:col-span-2 space-y-8">
             {/* Post */}
             <div
-              className={`rounded-2xl border bg-[#130f30]/60 p-7 ${
+              className={`rounded-2xl border bg-[#fff8f0]/60 p-7 ${
                 post.urgency === "high"
                   ? "border-red-800/40 urgency-high"
                   : post.urgency === "medium"
-                  ? "border-[#3a2d78] urgency-medium"
-                  : "border-[#3a2d78] urgency-low"
+                  ? "border-[#ffffff] urgency-medium"
+                  : "border-[#ffffff] urgency-low"
               }`}
             >
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <UrgencyBadge urgency={post.urgency} />
                 <CategoryBadge>{post.category}</CategoryBadge>
                 {post.pinned && (
-                  <span className="text-xs text-[#c89040] font-medium">✦ Pinned</span>
+                  <span className="text-xs text-[#231890] font-medium">✦ Pinned</span>
                 )}
               </div>
 
-              <h1 className="text-2xl md:text-3xl font-bold text-[#e8e4f8] leading-tight mb-5">
+              <h1 className="text-2xl md:text-3xl font-bold text-[#ffffff] leading-tight mb-5">
                 {post.title}
               </h1>
 
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-[#1a1640] flex items-center justify-center text-sm font-semibold text-[#a898d8] flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#fff0dc] flex-shrink-0">
                   {post.author.name.charAt(0)}
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-[#e8e4f8]">{post.author.name}</span>
+                    <span className="text-sm font-medium text-[#ffffff]">{post.author.name}</span>
                     <TrustBadge level={post.author.trustLevel} />
                   </div>
-                  <span className="text-xs text-[#6858a8]">{timeAgo(post.createdAt)}</span>
+                  <span className="text-xs text-[#ffd8b8]">{timeAgo(post.createdAt)}</span>
                 </div>
               </div>
 
@@ -111,19 +111,19 @@ export default async function PostDetailPage({
                 ))}
               </div>
 
-              <div className="flex items-center gap-6 pt-4 border-t border-[#3a2d78]/40">
-                <button className="flex items-center gap-1.5 text-sm text-[#6858a8] hover:text-[#c89040] transition-colors">
+              <div className="flex items-center gap-6 pt-4 border-t border-[#ffffff]/40">
+                <button className="flex items-center gap-1.5 text-sm text-[#ffd8b8] hover:text-[#231890] transition-colors">
                   {/* TODO: Connect to upvote action */}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                   </svg>
                   {post.upvotes} people relate
                 </button>
-                <button className="text-sm text-[#6858a8] hover:text-[#a898d8] transition-colors">
+                <button className="text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors">
                   {/* TODO: Connect to save action */}
                   Save
                 </button>
-                <button className="text-sm text-[#6858a8] hover:text-red-400 transition-colors ml-auto">
+                <button className="text-sm text-[#ffd8b8] hover:text-red-400 transition-colors ml-auto">
                   {/* TODO: Connect to report moderation flow */}
                   Report
                 </button>
@@ -132,7 +132,7 @@ export default async function PostDetailPage({
 
             {/* Replies */}
             <div>
-              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#c89040] mb-5">
+              <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-5">
                 {post.replyCount} {post.replyCount === 1 ? "response" : "responses"}
               </p>
 
@@ -143,8 +143,8 @@ export default async function PostDetailPage({
                   ))}
                 </div>
               ) : (
-                <div className="rounded-2xl border border-[#3a2d78]/40 bg-[#130f30]/30 p-8 text-center">
-                  <p className="text-[#6858a8] text-sm">
+                <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-8 text-center">
+                  <p className="text-[#ffd8b8] text-sm">
                     No responses yet. Be the first to show up for this person.
                   </p>
                 </div>
@@ -152,9 +152,9 @@ export default async function PostDetailPage({
             </div>
 
             {/* Reply form */}
-            <div className="rounded-2xl border border-[#3a2d78]/60 bg-[#130f30]/40 p-6">
-              <p className="text-sm font-semibold text-[#a898d8] mb-1">Add your voice</p>
-              <p className="text-xs text-[#6858a8] mb-5">
+            <div className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-6">
+              <p className="text-sm font-semibold text-[#fff0dc] mb-1">Add your voice</p>
+              <p className="text-xs text-[#ffd8b8] mb-5">
                 Speak from your experience. You don&apos;t have to have answers — you just have to be present.
               </p>
               <ReplyForm postId={post.id} />
@@ -166,8 +166,8 @@ export default async function PostDetailPage({
             {post.urgency === "high" && <EmergencyPanel />}
 
             {/* Stats */}
-            <div className="rounded-2xl border border-[#3a2d78]/40 bg-[#130f30]/30 p-5">
-              <p className="text-xs font-semibold text-[#a898d8] mb-4">About this post</p>
+            <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-5">
+              <p className="text-xs font-semibold text-[#fff0dc] mb-4">About this post</p>
               <dl className="space-y-3">
                 {[
                   { label: "Category", value: post.category },
@@ -176,19 +176,19 @@ export default async function PostDetailPage({
                   { label: "Saves", value: post.saves.toString() },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex justify-between">
-                    <dt className="text-xs text-[#6858a8]">{label}</dt>
-                    <dd className="text-xs text-[#a898d8] font-medium">{value}</dd>
+                    <dt className="text-xs text-[#ffd8b8]">{label}</dt>
+                    <dd className="text-xs text-[#fff0dc] font-medium">{value}</dd>
                   </div>
                 ))}
               </dl>
             </div>
 
             {/* Guidelines reminder */}
-            <div className="rounded-2xl border border-[#3a2d78]/40 bg-[#130f30]/30 p-5">
-              <p className="text-xs font-semibold text-[#a898d8] mb-3">
+            <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-5">
+              <p className="text-xs font-semibold text-[#fff0dc] mb-3">
                 Responding with care
               </p>
-              <ul className="space-y-2 text-xs text-[#6858a8]">
+              <ul className="space-y-2 text-xs text-[#ffd8b8]">
                 {[
                   "Share what you know from experience",
                   "Don't diagnose or prescribe",
@@ -196,7 +196,7 @@ export default async function PostDetailPage({
                   "It's okay to simply witness",
                 ].map((v) => (
                   <li key={v} className="flex items-start gap-2">
-                    <span className="text-[#c89040] mt-0.5">·</span>
+                    <span className="text-[#231890] mt-0.5">·</span>
                     {v}
                   </li>
                 ))}

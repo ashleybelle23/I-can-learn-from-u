@@ -19,14 +19,14 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
     <div
       className={`rounded-2xl border p-6 transition-all ${
         current
-          ? 'border-[#c89040]/40 bg-gradient-to-br from-[#130f30] to-[#1a1640]/30 glow-gold'
-          : 'border-[#3a2d78]/60 bg-[#130f30]/40'
+          ? 'border-[#231890]/40 bg-gradient-to-br from-[#fff8f0] to-[#fff0e8]/30 glow-gold'
+          : 'border-[#ffffff]/60 bg-[#fff8f0]/40'
       }`}
     >
       {current && (
         <div className="flex items-center gap-2 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#c89040] animate-pulse" />
-          <span className="text-xs font-semibold text-[#c89040] tracking-wide uppercase">Your level</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-[#231890] animate-pulse" />
+          <span className="text-xs font-semibold text-[#231890] tracking-wide uppercase">Your level</span>
         </div>
       )}
 
@@ -35,7 +35,7 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
           <h3 className="text-lg font-bold" style={{ color: config.color }}>
             {config.level}
           </h3>
-          <p className="text-xs text-[#6858a8] mt-0.5">
+          <p className="text-xs text-[#ffd8b8] mt-0.5">
             {config.minPoints.toLocaleString()}
             {config.maxPoints ? ` – ${config.maxPoints.toLocaleString()}` : '+'} points
           </p>
@@ -51,16 +51,16 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
         </div>
       </div>
 
-      <p className="text-sm text-[#2cd4f0] leading-relaxed mb-5">{config.description}</p>
+      <p className="text-sm text-[#231890] leading-relaxed mb-5">{config.description}</p>
 
       {/* Progress bar (only for current level) */}
       {progressPercent !== null && (
         <div className="mb-5">
-          <div className="flex justify-between text-xs text-[#6858a8] mb-1.5">
+          <div className="flex justify-between text-xs text-[#ffd8b8] mb-1.5">
             <span>{userPoints?.toLocaleString()} pts</span>
             <span>{config.maxPoints?.toLocaleString()} pts</span>
           </div>
-          <div className="h-1.5 w-full bg-[#3a2d78] rounded-full overflow-hidden">
+          <div className="h-1.5 w-full bg-[#ffffff] rounded-full overflow-hidden">
             <div
               className="h-full rounded-full transition-all duration-500"
               style={{
@@ -75,8 +75,8 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
       {/* Perks */}
       <ul className="space-y-2">
         {config.perks.map((perk) => (
-          <li key={perk} className="flex items-start gap-2 text-xs text-[#6858a8]">
-            <span className="text-[#c89040] mt-0.5">·</span>
+          <li key={perk} className="flex items-start gap-2 text-xs text-[#ffd8b8]">
+            <span className="text-[#231890] mt-0.5">·</span>
             {perk}
           </li>
         ))}

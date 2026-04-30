@@ -16,13 +16,13 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-gradient-to-r from-[#c89040] to-[#a87828] text-[#07051a] font-semibold hover:opacity-90 active:scale-[0.98]',
+    'bg-gradient-to-r from-[#231890] to-[#231890] text-[transparent] font-semibold hover:opacity-90 active:scale-[0.98]',
   secondary:
-    'bg-[#1a1640] text-[#e8e4f8] border border-[#3a2d78] hover:bg-[#3a2d78] active:scale-[0.98]',
+    'bg-[#fff0e8] text-[#ffffff] border border-[#ffffff] hover:bg-[#ffffff] active:scale-[0.98]',
   ghost:
-    'text-[#a898d8] hover:text-[#e8e4f8] hover:bg-[#130f30] active:scale-[0.98]',
+    'text-[#fff0dc] hover:text-[#ffffff] hover:bg-[#fff8f0] active:scale-[0.98]',
   outline:
-    'text-[#a898d8] border border-[#3a2d78] hover:border-[#2cd4f0] hover:text-[#e8e4f8] active:scale-[0.98]',
+    'text-[#fff0dc] border border-[#ffffff] hover:border-[#231890] hover:text-[#ffffff] active:scale-[0.98]',
   danger:
     'bg-red-900/40 text-red-300 border border-red-800/40 hover:bg-red-900/60 active:scale-[0.98]',
 };

@@ -11,11 +11,11 @@ interface BadgeProps {
 }
 
 const trustColors: Record<TrustLevel, string> = {
-  Listener: 'text-[#2cd4f0] border-[#2cd4f0]/30 bg-[#2cd4f0]/08',
-  Contributor: 'text-[#5090e8] border-[#5090e8]/30 bg-[#5090e8]/08',
-  Guide: 'text-[#9070e8] border-[#9070e8]/30 bg-[#9070e8]/08',
-  'Trusted Guide': 'text-[#c89040] border-[#c89040]/30 bg-[#c89040]/08',
-  'Community Steward': 'text-[#e8e4f8] border-[#e8e4f8]/30 bg-[#e8e4f8]/05',
+  Listener:            'text-[#e888a0] border-[#e888a0]/40 bg-[#e888a0]/10',
+  Contributor:         'text-[#e06038] border-[#e06038]/40 bg-[#e06038]/10',
+  Guide:               'text-[#8030c0] border-[#8030c0]/40 bg-[#8030c0]/10',
+  'Trusted Guide':     'text-[#231890] border-[#231890]/40 bg-[#231890]/10',
+  'Community Steward': 'text-white border-white/40 bg-white/10',
 };
 
 const urgencyStyles: Record<UrgencyLevel, string> = {
@@ -66,7 +66,7 @@ export function Tag({ children, className = '' }: { children: React.ReactNode; c
 
 export function CategoryBadge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex px-2.5 py-0.5 text-xs font-medium text-[#a898d8] bg-[#1a1640]/60 border border-[#3a2d78]/60 rounded-full">
+    <span className="inline-flex px-2.5 py-0.5 text-xs font-medium text-[#fff0dc] bg-[#fff0e8]/60 border border-[#ffffff]/60 rounded-full">
       {children}
     </span>
   );

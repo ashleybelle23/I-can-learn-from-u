@@ -27,15 +27,15 @@ export function GivebackSection() {
   ];
 
   return (
-    <div id="giveback" className="rounded-2xl border border-[#c89040]/20 bg-gradient-to-br from-[#130f30] to-[#1a1640]/20 p-8">
+    <div id="giveback" className="rounded-2xl border border-[#231890]/20 bg-gradient-to-br from-[#fff8f0] to-[#fff0e8]/20 p-8">
       <div className="text-center mb-8">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#c89040] mb-3">
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-3">
           Community Giveback
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-[#e8e4f8] mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#ffffff] mb-4">
           Every purchase is a form of reciprocity
         </h2>
-        <p className="text-[#2cd4f0] text-base max-w-2xl mx-auto">
+        <p className="text-[#231890] text-base max-w-2xl mx-auto">
           We don&apos;t extract from the communities whose wisdom and craft we carry. A meaningful portion of every sale flows back to the people and places that made it possible.
         </p>
       </div>
@@ -44,16 +44,16 @@ export function GivebackSection() {
         {streams.map((stream) => (
           <div
             key={stream.title}
-            className="p-5 rounded-xl border border-[#3a2d78]/60 bg-[#07051a]/40"
+            className="p-5 rounded-xl border border-[#ffffff]/60 bg-[transparent]/40"
           >
-            <div className="text-[#c89040] text-lg mb-3">{stream.icon}</div>
-            <h3 className="text-sm font-semibold text-[#e8e4f8] mb-2">{stream.title}</h3>
-            <p className="text-xs text-[#6858a8] leading-relaxed">{stream.description}</p>
+            <div className="text-[#231890] text-lg mb-3">{stream.icon}</div>
+            <h3 className="text-sm font-semibold text-[#ffffff] mb-2">{stream.title}</h3>
+            <p className="text-xs text-[#ffd8b8] leading-relaxed">{stream.description}</p>
           </div>
         ))}
       </div>
 
-      <p className="text-center text-xs text-[#6858a8] mt-6">
+      <p className="text-center text-xs text-[#ffd8b8] mt-6">
         {/* TODO: Add link to transparent impact reporting page when available */}
         Impact reports and fund allocation details published quarterly.
       </p>

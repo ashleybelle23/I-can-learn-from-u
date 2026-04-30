@@ -6,80 +6,69 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Cinematic dark — ODESZA concert / digital sanctuary palette */
-  --color-bg-base:       #07051a;
-  --color-bg-warm:       #0c0924;
-  --color-surface:       #130f30;
-  --color-surface-2:     #1a1640;
-  --color-surface-3:     #211c4a;
-  --color-border-light:  #2a2060;
-  --color-border:        #3a2d78;
-  --color-border-strong: #4a3a90;
-
-  --color-text-primary:   #e8e4f8;
-  --color-text-secondary: #a898d8;
-  --color-text-muted:     #6858a8;
-  --color-text-soft:      #483e98;
-
-  --color-cyan:   #2cd4f0;
-  --color-blue:   #5090e8;
-  --color-violet: #9070e8;
-  --color-gold:   #c89040;
+  /* Warm luminous — sunrise / firelight / atmospheric glow */
+  --color-pink:   #f890b0;
+  --color-coral:  #f06040;
+  --color-orange: #e88030;
+  --color-amber:  #f0a830;
+  --color-yellow: #f8c840;
+  --color-indigo: #231890;
 }
 
 :root {
-  --background: #07051a;
-  --foreground: #e8e4f8;
+  --background: #f87090;
+  --foreground: #ffffff;
 }
 
+/* ─── Body: the full ambient gradient ───────────────────────
+   Fixed so it doesn't scroll — the whole site feels like
+   standing inside a luminous, atmospheric environment.
+─────────────────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background:
+    radial-gradient(ellipse at 14% 22%, rgba(255, 120, 158, 0.88) 0%, transparent 52%),
+    radial-gradient(ellipse at 86% 10%, rgba(255, 214, 72, 0.78) 0%, transparent 48%),
+    radial-gradient(ellipse at 48% 92%, rgba(240, 96, 40, 0.72) 0%, transparent 55%),
+    radial-gradient(ellipse at 74% 60%, rgba(255, 164, 48, 0.42) 0%, transparent 44%),
+    radial-gradient(ellipse at 28% 72%, rgba(248, 80, 100, 0.32) 0%, transparent 40%),
+    linear-gradient(145deg, #f890b0 0%, #f06040 35%, #e88030 65%, #f8c840 100%);
+  background-attachment: fixed;
+  color: #ffffff;
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #130f30; }
-::-webkit-scrollbar-thumb { background: #3a2d78; border-radius: 3px; }
+::-webkit-scrollbar-track { background: rgba(240, 96, 64, 0.20); }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.35); border-radius: 3px; }
 
-::selection { background: #3a2d78; color: #e8e4f8; }
+::selection { background: rgba(35, 24, 144, 0.60); color: #ffffff; }
 
-:focus-visible { outline: 2px solid #2cd4f0; outline-offset: 2px; }
+:focus-visible { outline: 2px solid #231890; outline-offset: 2px; }
 
 /* ─── Hero gradient ──────────────────────────────────────────
-   Violet bloom upper-left, cyan light shaft upper-right,
-   deep indigo depth at bottom — like a concert in space.
+   Intensifies the body gradient in full-screen hero sections.
 ─────────────────────────────────────────────────────────── */
 .gradient-hero {
   background:
-    radial-gradient(ellipse at 18% 28%, rgba(110, 50, 220, 0.62) 0%, transparent 48%),
-    radial-gradient(ellipse at 80% 12%, rgba(30, 200, 240, 0.40) 0%, transparent 44%),
-    radial-gradient(ellipse at 55% 90%, rgba(40, 20, 130, 0.55) 0%, transparent 50%),
-    radial-gradient(ellipse at 88% 72%, rgba(0, 180, 220, 0.22) 0%, transparent 38%),
-    radial-gradient(ellipse at 8%  78%, rgba(90, 40, 200, 0.28) 0%, transparent 40%),
-    radial-gradient(ellipse at 42% 50%, rgba(60, 20, 160, 0.18) 0%, transparent 35%),
-    linear-gradient(158deg, #07051a 0%, #0e0a28 45%, #080620 100%);
+    radial-gradient(ellipse at 18% 30%, rgba(255, 80, 130, 0.52) 0%, transparent 48%),
+    radial-gradient(ellipse at 84% 14%, rgba(255, 220, 60, 0.48) 0%, transparent 44%),
+    radial-gradient(ellipse at 50% 88%, rgba(220, 80, 28, 0.44) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 68%, rgba(255, 158, 40, 0.28) 0%, transparent 40%);
 }
 
-/* ─── Gradient text ─────────────────────────────────────── */
+/* ─── Gradient text — white shimmer on warm bg ──────────── */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #2cd4f0 0%, #9070e8 50%, #c89040 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fff4e0 50%, #ffe8c0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Indigo-to-pink bridge — hero headlines, brand moments */
 .text-gradient-lavender {
-  background: linear-gradient(135deg, #a898d8, #9070e8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #2cd4f0, #5090e8);
+  background: linear-gradient(135deg, #231890 0%, #8030c0 50%, #f890b0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -88,51 +77,45 @@ body {
 /* ─── Glow effects ──────────────────────────────────────── */
 .glow-gold {
   box-shadow:
-    0 0  30px rgba(44, 212, 240, 0.14),
-    0 0  60px rgba(44, 212, 240, 0.06),
-    0 0 100px rgba(144, 112, 232, 0.08),
-    0 4px 24px rgba(0, 0, 0, 0.60);
+    0 0 40px rgba(255, 200, 80, 0.22),
+    0 0 80px rgba(255, 160, 60, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-.glow-cyan {
+.glow-warm {
   box-shadow:
-    0 0 20px rgba(44, 212, 240, 0.30),
-    0 0 50px rgba(44, 212, 240, 0.12);
+    0 0 24px rgba(255, 120, 80, 0.35),
+    0 0 50px rgba(255, 160, 60, 0.15);
 }
 
-.glow-violet {
-  box-shadow:
-    0 0 24px rgba(144, 112, 232, 0.32),
-    0 0 60px rgba(144, 112, 232, 0.12);
-}
-
-/* ─── Glass card ────────────────────────────────────────── */
+/* ─── Glass card — semi-transparent over warm gradient ─── */
 .card-glass {
-  background: rgba(19, 15, 48, 0.82);
+  background: rgba(255, 248, 240, 0.22);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(58, 45, 120, 0.45);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.30);
 }
 
-/* ─── Tag pill — cyan tint ──────────────────────────────── */
+/* ─── Tag pill — indigo tint for contrast ───────────────── */
 .tag-pill {
-  background: rgba(44, 212, 240, 0.08);
-  color: #38c0d8;
-  border: 1px solid rgba(44, 212, 240, 0.22);
+  background: rgba(35, 24, 144, 0.15);
+  color: #231890;
+  border: 1px solid rgba(35, 24, 144, 0.28);
   padding: 2px 10px;
   border-radius: 9999px;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   display: inline-block;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
 }
 
 /* ─── Prose ─────────────────────────────────────────────── */
 .prose-brand {
-  color: #a898d8;
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.8;
 }
 
 /* ─── Urgency borders ───────────────────────────────────── */
-.urgency-high   { border-left: 3px solid #f06070; }
-.urgency-medium { border-left: 3px solid #c89040; }
-.urgency-low    { border-left: 3px solid #2cd4f0; }
+.urgency-high   { border-left: 3px solid rgba(255, 255, 255, 0.90); }
+.urgency-medium { border-left: 3px solid rgba(255, 220, 100, 0.80); }
+.urgency-low    { border-left: 3px solid rgba(255, 255, 255, 0.50); }
