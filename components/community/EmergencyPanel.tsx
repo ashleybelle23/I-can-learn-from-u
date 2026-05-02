@@ -27,7 +27,7 @@ export function EmergencyPanel() {
           >
             <div className="min-w-0">
               <p className="text-xs font-semibold text-red-200">{resource.name}</p>
-              <p className="text-xs text-[#ffd8b8] mt-0.5 truncate">{resource.hours}</p>
+              <p className="text-xs text-[#3a2a80] mt-0.5 truncate">{resource.hours}</p>
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
               {resource.phone && (

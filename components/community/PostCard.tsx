@@ -45,17 +45,17 @@ export function PostCard({ post, compact = false }: PostCardProps) {
               </span>
             )}
           </div>
-          <span className="text-xs text-[#ffd8b8] flex-shrink-0">{timeAgo(post.createdAt)}</span>
+          <span className="text-xs text-[#3a2a80] flex-shrink-0">{timeAgo(post.createdAt)}</span>
         </div>
 
         {/* Title */}
-        <h3 className="text-base font-semibold text-[#ffffff] group-hover:text-[#231890] transition-colors leading-snug mb-2">
+        <h3 className="text-base font-semibold text-[#1a1060] group-hover:text-[#231890] transition-colors leading-snug mb-2">
           {post.title}
         </h3>
 
         {/* Body excerpt */}
         {!compact && (
-          <p className="text-sm text-[#ffd8b8] leading-relaxed line-clamp-2 mb-4">
+          <p className="text-sm text-[#3a2a80] leading-relaxed line-clamp-2 mb-4">
             {post.body}
           </p>
         )}
@@ -72,7 +72,7 @@ export function PostCard({ post, compact = false }: PostCardProps) {
         {/* Footer */}
         <div className="flex items-center justify-between pt-3 border-t border-[#ffffff]/40">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-[#fff0e8] flex items-center justify-center text-xs font-semibold text-[#fff0dc] flex-shrink-0">
+            <div className="w-7 h-7 rounded-full bg-[#fff0e8] flex items-center justify-center text-xs font-semibold text-[#2a1a70] flex-shrink-0">
               {post.author.name.charAt(0)}
             </div>
             <div className="flex items-center gap-1.5">
@@ -80,7 +80,7 @@ export function PostCard({ post, compact = false }: PostCardProps) {
               <TrustBadge level={post.author.trustLevel} />
             </div>
           </div>
-          <div className="flex items-center gap-4 text-xs text-[#ffd8b8]">
+          <div className="flex items-center gap-4 text-xs text-[#3a2a80]">
             <span className="flex items-center gap-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />

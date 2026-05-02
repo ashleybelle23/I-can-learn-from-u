@@ -66,7 +66,7 @@ export function Tag({ children, className = '' }: { children: React.ReactNode; c
 
 export function CategoryBadge({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex px-2.5 py-0.5 text-xs font-medium text-[#fff0dc] bg-[#fff0e8]/60 border border-[#ffffff]/60 rounded-full">
+    <span className="inline-flex px-2.5 py-0.5 text-xs font-medium text-[#2a1a70] bg-[#fff0e8]/60 border border-[#ffffff]/60 rounded-full">
       {children}
     </span>
   );

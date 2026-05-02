@@ -29,11 +29,11 @@ export default function HomePage() {
             </p>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight mb-8">
-              <span className="text-[#ffffff]">Learn from the lives,</span>
+              <span className="text-[#1a1060]">Learn from the lives,</span>
               <br />
               <span className="text-gradient-gold">stories, and wisdom</span>
               <br />
-              <span className="text-[#ffffff]">of others.</span>
+              <span className="text-[#1a1060]">of others.</span>
             </h1>
 
             <p className="text-lg md:text-xl text-[#231890] leading-relaxed mb-10 max-w-2xl">
@@ -52,7 +52,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/podcast"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl text-base font-medium border border-[#ffffff] text-[#fff0dc] hover:border-[#231890] hover:text-[#ffffff] transition-all"
+                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl text-base font-medium border border-[#ffffff] text-[#2a1a70] hover:border-[#231890] hover:text-[#1a1060] transition-all"
               >
                 Listen to the podcast
               </Link>
@@ -64,15 +64,15 @@ export default function HomePage() {
                 {mockUsers.slice(0, 4).map((user) => (
                   <div
                     key={user.id}
-                    className="w-9 h-9 rounded-full bg-[#fff0e8] border-2 border-[transparent] flex items-center justify-center text-xs font-semibold text-[#fff0dc]"
+                    className="w-9 h-9 rounded-full bg-[#fff0e8] border-2 border-[transparent] flex items-center justify-center text-xs font-semibold text-[#2a1a70]"
                   >
                     {user.name.charAt(0)}
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-[#ffd8b8]">
+              <p className="text-sm text-[#3a2a80]">
                 Join a growing community of{" "}
-                <span className="text-[#fff0dc] font-medium">trusted guides</span>
+                <span className="text-[#2a1a70] font-medium">trusted guides</span>
                 {" "}and honest voices
               </p>
             </div>
@@ -114,13 +114,13 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-xl bg-[#fff0e8]/60 flex items-center justify-center text-[#231890] text-xl mb-5 group-hover:bg-[#fff0e8] transition-colors">
                 {pillar.icon}
               </div>
-              <h3 className="text-lg font-bold text-[#ffffff] mb-3 group-hover:text-[#231890] transition-colors">
+              <h3 className="text-lg font-bold text-[#1a1060] mb-3 group-hover:text-[#231890] transition-colors">
                 {pillar.title}
               </h3>
-              <p className="text-sm text-[#ffd8b8] leading-relaxed mb-5">
+              <p className="text-sm text-[#3a2a80] leading-relaxed mb-5">
                 {pillar.description}
               </p>
-              <span className="text-sm font-medium text-[#231890] group-hover:text-[#fff0dc] transition-colors flex items-center gap-1">
+              <span className="text-sm font-medium text-[#231890] group-hover:text-[#2a1a70] transition-colors flex items-center gap-1">
                 {pillar.cta}
                 <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -140,7 +140,7 @@ export default function HomePage() {
             titleGradient="lavender"
             description="Stories of healing, growth, and hard-won wisdom."
           />
-          <Link href="/podcast" className="hidden md:inline-flex text-sm text-[#231890] hover:text-[#fff0dc] transition-colors items-center gap-1">
+          <Link href="/podcast" className="hidden md:inline-flex text-sm text-[#231890] hover:text-[#2a1a70] transition-colors items-center gap-1">
             All episodes
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -158,7 +158,7 @@ export default function HomePage() {
             title="Real people, real support"
             description="This is not a forum. It's a circle. People show up here when they need to be witnessed — and when they're ready to witness others."
           />
-          <Link href="/community" className="hidden md:inline-flex text-sm text-[#231890] hover:text-[#fff0dc] transition-colors items-center gap-1">
+          <Link href="/community" className="hidden md:inline-flex text-sm text-[#231890] hover:text-[#2a1a70] transition-colors items-center gap-1">
             All posts
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -179,7 +179,7 @@ export default function HomePage() {
             titleGradient="gold"
             description="Sourced from cultures worldwide. Chosen for quality, story, and care."
           />
-          <Link href="/store" className="hidden md:inline-flex text-sm text-[#231890] hover:text-[#fff0dc] transition-colors items-center gap-1">
+          <Link href="/store" className="hidden md:inline-flex text-sm text-[#231890] hover:text-[#2a1a70] transition-colors items-center gap-1">
             All products
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -199,7 +199,7 @@ export default function HomePage() {
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-4">
                 Community trust
               </p>
-              <h2 className="text-2xl md:text-3xl font-bold text-[#ffffff] mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#1a1060] mb-4">
                 Reputation earned through care
               </h2>
               <p className="text-[#231890] leading-relaxed mb-6">
@@ -223,15 +223,15 @@ export default function HomePage() {
                   key={user.id}
                   className="flex items-center gap-3 p-3 rounded-xl bg-[transparent]/60 border border-[#ffffff]/40"
                 >
-                  <div className="w-10 h-10 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#fff0dc] flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#2a1a70] flex-shrink-0">
                     {user.name.charAt(0)}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-0.5">
-                      <span className="text-sm font-medium text-[#ffffff] truncate">{user.name}</span>
+                      <span className="text-sm font-medium text-[#1a1060] truncate">{user.name}</span>
                       <TrustBadge level={user.trustLevel} />
                     </div>
-                    <p className="text-xs text-[#ffd8b8] truncate">{user.bio}</p>
+                    <p className="text-xs text-[#3a2a80] truncate">{user.bio}</p>
                   </div>
                   <span className="text-xs text-[#231890] font-semibold flex-shrink-0">
                     {user.points.toLocaleString()} pts
@@ -247,7 +247,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="rounded-2xl border border-[#231890]/15 bg-gradient-to-r from-[#fff8f0]/80 via-[#fff0e8]/20 to-[#fff8f0]/80 p-8 md:p-12 text-center">
           <span className="text-3xl mb-4 block">◈</span>
-          <h2 className="text-xl md:text-2xl font-bold text-[#ffffff] mb-3">
+          <h2 className="text-xl md:text-2xl font-bold text-[#1a1060] mb-3">
             A portion of every store purchase supports source communities
           </h2>
           <p className="text-[#231890] max-w-xl mx-auto mb-6 leading-relaxed">

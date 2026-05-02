@@ -132,7 +132,7 @@ export default function ResourcesPage() {
           <div className="space-y-8">
             {additionalResources.map((category) => (
               <div key={category.category}>
-                <h3 className="text-sm font-semibold text-[#fff0dc] mb-4">{category.category}</h3>
+                <h3 className="text-sm font-semibold text-[#2a1a70] mb-4">{category.category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {category.resources.map((resource) => (
                     <a
@@ -144,12 +144,12 @@ export default function ResourcesPage() {
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div>
-                          <h4 className="text-sm font-semibold text-[#ffffff] group-hover:text-[#231890] transition-colors mb-1">
+                          <h4 className="text-sm font-semibold text-[#1a1060] group-hover:text-[#231890] transition-colors mb-1">
                             {resource.name}
                           </h4>
-                          <p className="text-xs text-[#ffd8b8] leading-relaxed">{resource.description}</p>
+                          <p className="text-xs text-[#3a2a80] leading-relaxed">{resource.description}</p>
                         </div>
-                        <svg className="w-4 h-4 text-[#ffd8b8] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-[#3a2a80] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </div>
@@ -172,7 +172,7 @@ export default function ResourcesPage() {
                 key={guide.title}
                 className="p-5 rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40"
               >
-                <h3 className="text-sm font-semibold text-[#fff0dc] mb-2">{guide.title}</h3>
+                <h3 className="text-sm font-semibold text-[#2a1a70] mb-2">{guide.title}</h3>
                 <p className="text-xs text-[#231890] leading-relaxed">{guide.body}</p>
               </div>
             ))}
@@ -181,7 +181,7 @@ export default function ResourcesPage() {
 
         {/* Report section */}
         <section id="report" className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-8">
-          <h2 className="text-xl font-bold text-[#ffffff] mb-3">Report harmful content</h2>
+          <h2 className="text-xl font-bold text-[#1a1060] mb-3">Report harmful content</h2>
           <p className="text-[#231890] leading-relaxed mb-6">
             If you see content that promotes self-harm, bullying, dangerous advice, or hate — please report it. Every report is reviewed. Your safety and the community&apos;s safety matter to us.
           </p>
@@ -189,7 +189,7 @@ export default function ResourcesPage() {
           <button className="px-6 py-3 rounded-xl text-sm font-semibold bg-red-900/40 text-red-300 border border-red-800/40 hover:bg-red-900/60 transition-colors">
             Submit a report
           </button>
-          <p className="text-xs text-[#ffd8b8] mt-4">
+          <p className="text-xs text-[#3a2a80] mt-4">
             All reports are confidential. Reporting does not automatically remove content — our team reviews each one.
           </p>
         </section>

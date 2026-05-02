@@ -41,8 +41,8 @@ export function Nav() {
                   href={link.href}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
                     active
-                      ? 'text-[#ffffff] bg-[#fff0e8]/60'
-                      : 'text-[#231890] hover:text-[#ffffff] hover:bg-[#fff8f0]'
+                      ? 'text-[#1a1060] bg-[#fff0e8]/60'
+                      : 'text-[#231890] hover:text-[#1a1060] hover:bg-[#fff8f0]'
                   }`}
                 >
                   {link.label}
@@ -62,7 +62,7 @@ export function Nav() {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden p-2 text-[#231890] hover:text-[#ffffff] transition-colors"
+              className="md:hidden p-2 text-[#231890] hover:text-[#1a1060] transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -91,8 +91,8 @@ export function Nav() {
                   onClick={() => setMenuOpen(false)}
                   className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                     active
-                      ? 'text-[#ffffff] bg-[#fff0e8]/60'
-                      : 'text-[#231890] hover:text-[#ffffff] hover:bg-[#fff8f0]'
+                      ? 'text-[#1a1060] bg-[#fff0e8]/60'
+                      : 'text-[#231890] hover:text-[#1a1060] hover:bg-[#fff8f0]'
                   }`}
                 >
                   {link.label}

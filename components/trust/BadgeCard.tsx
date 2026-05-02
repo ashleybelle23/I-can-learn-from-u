@@ -38,25 +38,25 @@ export function BadgeCard({ badge, earned = false }: { badge: Badge; earned?: bo
         style={
           earned
             ? { backgroundColor: `${color}20`, color }
-            : { backgroundColor: '#ffffff', color: '#ffe4c8' }
+            : { backgroundColor: 'rgba(255,255,255,0.30)', color: '#3a2a80' }
         }
       >
         {badge.icon}
       </div>
-      <h4 className="text-xs font-semibold text-[#ffffff] mb-1">{badge.name}</h4>
-      <p className="text-xs text-[#ffd8b8] leading-relaxed mb-2">{badge.description}</p>
+      <h4 className="text-xs font-semibold text-[#1a1060] mb-1">{badge.name}</h4>
+      <p className="text-xs text-[#3a2a80] leading-relaxed mb-2">{badge.description}</p>
       <span
         className="text-xs font-medium px-2 py-0.5 rounded-full"
         style={
           earned
             ? { color, backgroundColor: `${color}15` }
-            : { color: '#ffe4c8', backgroundColor: '#fff8f0' }
+            : { color: '#3a2a80', backgroundColor: 'rgba(255,255,255,0.25)' }
         }
       >
         {rarityLabels[badge.rarity]}
       </span>
       {!earned && (
-        <p className="text-xs text-[#ffe4c8] mt-2">Not yet earned</p>
+        <p className="text-xs text-[#3a2a80] mt-2">Not yet earned</p>
       )}
     </div>
   );

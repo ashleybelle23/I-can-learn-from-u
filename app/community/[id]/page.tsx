@@ -52,7 +52,7 @@ export default async function PostDetailPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/community"
-            className="inline-flex items-center gap-2 text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-[#3a2a80] hover:text-[#2a1a70] transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -84,20 +84,20 @@ export default async function PostDetailPage({
                 )}
               </div>
 
-              <h1 className="text-2xl md:text-3xl font-bold text-[#ffffff] leading-tight mb-5">
+              <h1 className="text-2xl md:text-3xl font-bold text-[#1a1060] leading-tight mb-5">
                 {post.title}
               </h1>
 
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#fff0dc] flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#2a1a70] flex-shrink-0">
                   {post.author.name.charAt(0)}
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-[#ffffff]">{post.author.name}</span>
+                    <span className="text-sm font-medium text-[#1a1060]">{post.author.name}</span>
                     <TrustBadge level={post.author.trustLevel} />
                   </div>
-                  <span className="text-xs text-[#ffd8b8]">{timeAgo(post.createdAt)}</span>
+                  <span className="text-xs text-[#3a2a80]">{timeAgo(post.createdAt)}</span>
                 </div>
               </div>
 
@@ -112,18 +112,18 @@ export default async function PostDetailPage({
               </div>
 
               <div className="flex items-center gap-6 pt-4 border-t border-[#ffffff]/40">
-                <button className="flex items-center gap-1.5 text-sm text-[#ffd8b8] hover:text-[#231890] transition-colors">
+                <button className="flex items-center gap-1.5 text-sm text-[#3a2a80] hover:text-[#231890] transition-colors">
                   {/* TODO: Connect to upvote action */}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                   </svg>
                   {post.upvotes} people relate
                 </button>
-                <button className="text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors">
+                <button className="text-sm text-[#3a2a80] hover:text-[#2a1a70] transition-colors">
                   {/* TODO: Connect to save action */}
                   Save
                 </button>
-                <button className="text-sm text-[#ffd8b8] hover:text-red-400 transition-colors ml-auto">
+                <button className="text-sm text-[#3a2a80] hover:text-red-400 transition-colors ml-auto">
                   {/* TODO: Connect to report moderation flow */}
                   Report
                 </button>
@@ -144,7 +144,7 @@ export default async function PostDetailPage({
                 </div>
               ) : (
                 <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-8 text-center">
-                  <p className="text-[#ffd8b8] text-sm">
+                  <p className="text-[#3a2a80] text-sm">
                     No responses yet. Be the first to show up for this person.
                   </p>
                 </div>
@@ -153,8 +153,8 @@ export default async function PostDetailPage({
 
             {/* Reply form */}
             <div className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-6">
-              <p className="text-sm font-semibold text-[#fff0dc] mb-1">Add your voice</p>
-              <p className="text-xs text-[#ffd8b8] mb-5">
+              <p className="text-sm font-semibold text-[#2a1a70] mb-1">Add your voice</p>
+              <p className="text-xs text-[#3a2a80] mb-5">
                 Speak from your experience. You don&apos;t have to have answers — you just have to be present.
               </p>
               <ReplyForm postId={post.id} />
@@ -167,7 +167,7 @@ export default async function PostDetailPage({
 
             {/* Stats */}
             <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-5">
-              <p className="text-xs font-semibold text-[#fff0dc] mb-4">About this post</p>
+              <p className="text-xs font-semibold text-[#2a1a70] mb-4">About this post</p>
               <dl className="space-y-3">
                 {[
                   { label: "Category", value: post.category },
@@ -176,8 +176,8 @@ export default async function PostDetailPage({
                   { label: "Saves", value: post.saves.toString() },
                 ].map(({ label, value }) => (
                   <div key={label} className="flex justify-between">
-                    <dt className="text-xs text-[#ffd8b8]">{label}</dt>
-                    <dd className="text-xs text-[#fff0dc] font-medium">{value}</dd>
+                    <dt className="text-xs text-[#3a2a80]">{label}</dt>
+                    <dd className="text-xs text-[#2a1a70] font-medium">{value}</dd>
                   </div>
                 ))}
               </dl>
@@ -185,10 +185,10 @@ export default async function PostDetailPage({
 
             {/* Guidelines reminder */}
             <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-5">
-              <p className="text-xs font-semibold text-[#fff0dc] mb-3">
+              <p className="text-xs font-semibold text-[#2a1a70] mb-3">
                 Responding with care
               </p>
-              <ul className="space-y-2 text-xs text-[#ffd8b8]">
+              <ul className="space-y-2 text-xs text-[#3a2a80]">
                 {[
                   "Share what you know from experience",
                   "Don't diagnose or prescribe",

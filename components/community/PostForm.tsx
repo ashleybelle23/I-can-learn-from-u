@@ -41,7 +41,7 @@ export function PostForm() {
         <div className="w-12 h-12 rounded-full bg-[#231890]/20 flex items-center justify-center mx-auto mb-4">
           <span className="text-2xl">✦</span>
         </div>
-        <h3 className="text-lg font-semibold text-[#ffffff] mb-2">Your post has been shared</h3>
+        <h3 className="text-lg font-semibold text-[#1a1060] mb-2">Your post has been shared</h3>
         <p className="text-sm text-[#231890]">
           The community will receive it with care. You are not alone.
         </p>
@@ -58,7 +58,7 @@ export function PostForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label htmlFor="post-title" className="block text-sm font-medium text-[#fff0dc] mb-2">
+        <label htmlFor="post-title" className="block text-sm font-medium text-[#2a1a70] mb-2">
           What are you navigating?
         </label>
         <input
@@ -68,12 +68,12 @@ export function PostForm() {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Give your post a brief, honest title"
           required
-          className="w-full px-4 py-3 rounded-xl bg-[#fff8f0] border border-[#ffffff] text-[#ffffff] placeholder-[#ffd8b8] text-sm focus:outline-none focus:border-[#231890] transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-[#fff8f0] border border-[#ffffff] text-[#1a1060] placeholder-[#ffd8b8] text-sm focus:outline-none focus:border-[#231890] transition-colors"
         />
       </div>
 
       <div>
-        <label htmlFor="post-body" className="block text-sm font-medium text-[#fff0dc] mb-2">
+        <label htmlFor="post-body" className="block text-sm font-medium text-[#2a1a70] mb-2">
           Share as much or as little as you&apos;re ready to
         </label>
         <textarea
@@ -83,12 +83,12 @@ export function PostForm() {
           placeholder="What's happening? What do you need? This is a safe space."
           required
           rows={5}
-          className="w-full px-4 py-3 rounded-xl bg-[#fff8f0] border border-[#ffffff] text-[#ffffff] placeholder-[#ffd8b8] text-sm focus:outline-none focus:border-[#231890] transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-[#fff8f0] border border-[#ffffff] text-[#1a1060] placeholder-[#ffd8b8] text-sm focus:outline-none focus:border-[#231890] transition-colors resize-none"
         />
       </div>
 
       <div>
-        <label htmlFor="category" className="block text-sm font-medium text-[#fff0dc] mb-2">
+        <label htmlFor="category" className="block text-sm font-medium text-[#2a1a70] mb-2">
           Category
         </label>
         <select
@@ -96,7 +96,7 @@ export function PostForm() {
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           required
-          className="w-full px-4 py-3 rounded-xl bg-[#fff8f0] border border-[#ffffff] text-[#ffffff] text-sm focus:outline-none focus:border-[#231890] transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-[#fff8f0] border border-[#ffffff] text-[#1a1060] text-sm focus:outline-none focus:border-[#231890] transition-colors"
         >
           <option value="" disabled>Select the closest category</option>
           {mockCategories.map((cat) => (
@@ -106,7 +106,7 @@ export function PostForm() {
       </div>
 
       <div>
-        <p className="text-sm font-medium text-[#fff0dc] mb-3">Urgency level</p>
+        <p className="text-sm font-medium text-[#2a1a70] mb-3">Urgency level</p>
         <div className="space-y-2">
           {urgencyOptions.map((opt) => (
             <label
@@ -126,8 +126,8 @@ export function PostForm() {
                 className="mt-0.5 accent-[#231890]"
               />
               <div>
-                <p className="text-sm font-medium text-[#ffffff]">{opt.label}</p>
-                <p className="text-xs text-[#ffd8b8]">{opt.description}</p>
+                <p className="text-sm font-medium text-[#1a1060]">{opt.label}</p>
+                <p className="text-xs text-[#3a2a80]">{opt.description}</p>
               </div>
             </label>
           ))}
@@ -135,8 +135,8 @@ export function PostForm() {
       </div>
 
       <div className="p-4 rounded-xl bg-[#fff8f0]/60 border border-[#ffffff]/40">
-        <p className="text-xs text-[#ffd8b8] leading-relaxed">
-          <strong className="text-[#fff0dc]">Community reminder:</strong> This is peer support — people who care, not licensed professionals. For emergencies, please call 911 or 988. Be kind with yourself and others.
+        <p className="text-xs text-[#3a2a80] leading-relaxed">
+          <strong className="text-[#2a1a70]">Community reminder:</strong> This is peer support — people who care, not licensed professionals. For emergencies, please call 911 or 988. Be kind with yourself and others.
         </p>
       </div>
 

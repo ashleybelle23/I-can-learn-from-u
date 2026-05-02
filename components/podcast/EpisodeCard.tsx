@@ -26,14 +26,14 @@ export function EpisodeCard({ episode, featured = false }: EpisodeCardProps) {
               <span className="text-xs text-[#231890] font-semibold tracking-wide uppercase">
                 S{episode.season} · E{episode.episodeNumber}
               </span>
-              <span className="text-xs text-[#ffd8b8]">·</span>
-              <span className="text-xs text-[#ffd8b8]">{episode.duration}</span>
+              <span className="text-xs text-[#3a2a80]">·</span>
+              <span className="text-xs text-[#3a2a80]">{episode.duration}</span>
             </div>
-            <h3 className="text-base font-semibold text-[#ffffff] group-hover:text-[#231890] transition-colors leading-snug mb-1">
+            <h3 className="text-base font-semibold text-[#1a1060] group-hover:text-[#231890] transition-colors leading-snug mb-1">
               {episode.title}
             </h3>
             <p className="text-xs text-[#231890] mb-3">with {episode.guest}</p>
-            <p className="text-sm text-[#ffd8b8] leading-relaxed line-clamp-2">{episode.description}</p>
+            <p className="text-sm text-[#3a2a80] leading-relaxed line-clamp-2">{episode.description}</p>
             <div className="flex flex-wrap gap-1.5 mt-3">
               {episode.themes.slice(0, 3).map((theme) => (
                 <Tag key={theme}>{theme}</Tag>
@@ -61,15 +61,15 @@ export function EpisodeCard({ episode, featured = false }: EpisodeCardProps) {
           <p className="text-xs text-[#231890] font-semibold tracking-wide uppercase">
             S{episode.season} · E{episode.episodeNumber}
           </p>
-          <p className="text-xs text-[#ffd8b8]">{episode.duration} · with {episode.guest}</p>
+          <p className="text-xs text-[#3a2a80]">{episode.duration} · with {episode.guest}</p>
         </div>
       </div>
 
-      <h3 className="text-sm font-semibold text-[#ffffff] group-hover:text-[#231890] transition-colors leading-snug mb-2">
+      <h3 className="text-sm font-semibold text-[#1a1060] group-hover:text-[#231890] transition-colors leading-snug mb-2">
         {episode.title}
       </h3>
 
-      <p className="text-xs text-[#ffd8b8] leading-relaxed line-clamp-2 mb-3">
+      <p className="text-xs text-[#3a2a80] leading-relaxed line-clamp-2 mb-3">
         {episode.description}
       </p>
 

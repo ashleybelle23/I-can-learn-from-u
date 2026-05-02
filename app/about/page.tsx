@@ -23,7 +23,7 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
         {/* Origin */}
         <section className="prose-brand space-y-4">
-          <h2 className="text-2xl font-bold text-[#ffffff]">The origin</h2>
+          <h2 className="text-2xl font-bold text-[#1a1060]">The origin</h2>
           <p>
             There&apos;s a moment in ODESZA&apos;s &ldquo;Line of Sight&rdquo; — you know it if you&apos;ve felt it — where the music opens like a door and you&apos;re suddenly aware of everyone around you, their lives running parallel to yours, carrying things you&apos;ve never had to carry, seeing things you&apos;ve never seen.
           </p>
@@ -37,7 +37,7 @@ export default function AboutPage() {
 
         {/* What we believe */}
         <section>
-          <h2 className="text-2xl font-bold text-[#ffffff] mb-6">What we believe</h2>
+          <h2 className="text-2xl font-bold text-[#1a1060] mb-6">What we believe</h2>
           <div className="space-y-4">
             {[
               {
@@ -67,7 +67,7 @@ export default function AboutPage() {
               >
                 <div className="text-[#231890] text-xl mt-1 flex-shrink-0">{item.icon}</div>
                 <div>
-                  <h3 className="text-base font-semibold text-[#ffffff] mb-2">{item.belief}</h3>
+                  <h3 className="text-base font-semibold text-[#1a1060] mb-2">{item.belief}</h3>
                   <p className="text-sm text-[#231890] leading-relaxed">{item.description}</p>
                 </div>
               </div>
@@ -77,8 +77,8 @@ export default function AboutPage() {
 
         {/* Safety */}
         <section className="p-7 rounded-2xl border border-[#231890]/25 bg-[#231890]/06">
-          <h2 className="text-xl font-bold text-[#ffffff] mb-4">On safety and limits</h2>
-          <div className="space-y-3 text-sm text-[#fff0dc] leading-relaxed">
+          <h2 className="text-xl font-bold text-[#1a1060] mb-4">On safety and limits</h2>
+          <div className="space-y-3 text-sm text-[#2a1a70] leading-relaxed">
             <p>
               We are a peer support community, not a mental health service. The people here are not therapists, counselors, or crisis workers — they are humans with hard-won experience who chose to show up.
             </p>
@@ -87,15 +87,15 @@ export default function AboutPage() {
             </p>
             <p>
               But if you or someone you know is in immediate danger, please call{" "}
-              <strong className="text-[#ffffff]">911</strong> or the Suicide &amp; Crisis Lifeline at{" "}
-              <strong className="text-[#ffffff]">988</strong>. No community platform replaces that.
+              <strong className="text-[#1a1060]">911</strong> or the Suicide &amp; Crisis Lifeline at{" "}
+              <strong className="text-[#1a1060]">988</strong>. No community platform replaces that.
             </p>
           </div>
         </section>
 
         {/* Contact / contribute */}
         <section id="contact">
-          <h2 className="text-2xl font-bold text-[#ffffff] mb-6">Get involved</h2>
+          <h2 className="text-2xl font-bold text-[#1a1060] mb-6">Get involved</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {[
               {
@@ -127,7 +127,7 @@ export default function AboutPage() {
                 key={item.title}
                 className="p-6 rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40"
               >
-                <h3 className="text-base font-semibold text-[#ffffff] mb-2">{item.title}</h3>
+                <h3 className="text-base font-semibold text-[#1a1060] mb-2">{item.title}</h3>
                 <p className="text-sm text-[#231890] leading-relaxed mb-4">{item.description}</p>
                 <Link
                   href={item.href}

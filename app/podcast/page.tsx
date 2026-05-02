@@ -52,7 +52,7 @@ export default function PodcastPage() {
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-4">
               Share your story
             </p>
-            <h2 className="text-2xl font-bold text-[#ffffff] mb-4">
+            <h2 className="text-2xl font-bold text-[#1a1060] mb-4">
               Have something worth teaching?
             </h2>
             <p className="text-[#231890] leading-relaxed mb-6">

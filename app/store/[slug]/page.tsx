@@ -48,7 +48,7 @@ export default async function ProductPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/store"
-            className="inline-flex items-center gap-2 text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-[#3a2a80] hover:text-[#2a1a70] transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -73,16 +73,16 @@ export default async function ProductPage({
                  product.category === "Home & Sacred Space" ? "⬡" : "◈"}
               </div>
               {/* TODO: Replace with actual product image using Next.js Image component */}
-              <p className="text-sm text-[#ffd8b8] italic">Product image placeholder</p>
-              <p className="text-xs text-[#ffd8b8] mt-1">Place image in /public/products/{product.slug}.jpg</p>
+              <p className="text-sm text-[#3a2a80] italic">Product image placeholder</p>
+              <p className="text-xs text-[#3a2a80] mt-1">Place image in /public/products/{product.slug}.jpg</p>
             </div>
           </div>
 
           {/* Details */}
           <div className="space-y-6">
             <div>
-              <p className="text-xs text-[#ffd8b8] mb-2">{product.category}</p>
-              <h1 className="text-3xl font-bold text-[#ffffff] leading-tight mb-2">
+              <p className="text-xs text-[#3a2a80] mb-2">{product.category}</p>
+              <h1 className="text-3xl font-bold text-[#1a1060] leading-tight mb-2">
                 {product.name}
               </h1>
               <p className="text-2xl font-bold text-gradient-gold mb-4">${product.price}</p>
@@ -97,7 +97,7 @@ export default async function ProductPage({
 
             {/* Origin */}
             <div className="p-5 rounded-xl border border-[#ffffff]/60 bg-[#fff8f0]/40">
-              <p className="text-xs font-semibold text-[#fff0dc] mb-1 flex items-center gap-1">
+              <p className="text-xs font-semibold text-[#2a1a70] mb-1 flex items-center gap-1">
                 <span>◈</span> Origin
               </p>
               <p className="text-sm text-[#231890]">{product.origin}</p>
@@ -105,7 +105,7 @@ export default async function ProductPage({
 
             {/* Cultural context */}
             <div className="p-5 rounded-xl border border-[#ffffff]/60 bg-[#fff8f0]/40">
-              <p className="text-xs font-semibold text-[#fff0dc] mb-2">Cultural context</p>
+              <p className="text-xs font-semibold text-[#2a1a70] mb-2">Cultural context</p>
               <p className="text-sm text-[#231890] leading-relaxed">{product.culturalContext}</p>
             </div>
 
@@ -114,8 +114,8 @@ export default async function ProductPage({
               <p className="text-xs font-semibold text-[#231890] mb-2 flex items-center gap-1">
                 <span>✦</span> Community impact
               </p>
-              <p className="text-sm text-[#fff0dc] leading-relaxed">{product.communityImpactNote}</p>
-              <p className="text-xs text-[#ffd8b8] mt-2">
+              <p className="text-sm text-[#2a1a70] leading-relaxed">{product.communityImpactNote}</p>
+              <p className="text-xs text-[#3a2a80] mt-2">
                 A portion of this purchase supports source communities.{" "}
                 <Link href="/store#giveback" className="text-[#231890] hover:underline">
                   Learn more
@@ -131,7 +131,7 @@ export default async function ProductPage({
               >
                 Add to cart — ${product.price}
               </button>
-              <p className="text-center text-xs text-[#ffd8b8]">
+              <p className="text-center text-xs text-[#3a2a80]">
                 {product.inStock ? (
                   <span className="flex items-center justify-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />

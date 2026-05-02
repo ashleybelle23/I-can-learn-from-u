@@ -45,15 +45,15 @@ export function ReplyCard({ reply }: ReplyCardProps) {
       {/* Author */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#fff0dc] flex-shrink-0">
+          <div className="w-9 h-9 rounded-full bg-[#fff0e8] flex items-center justify-center text-sm font-semibold text-[#2a1a70] flex-shrink-0">
             {reply.author.name.charAt(0)}
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-[#ffffff]">{reply.author.name}</span>
+              <span className="text-sm font-medium text-[#1a1060]">{reply.author.name}</span>
               <TrustBadge level={reply.author.trustLevel} />
             </div>
-            <span className="text-xs text-[#ffd8b8]">{timeAgo(reply.createdAt)}</span>
+            <span className="text-xs text-[#3a2a80]">{timeAgo(reply.createdAt)}</span>
           </div>
         </div>
       </div>
@@ -65,18 +65,18 @@ export function ReplyCard({ reply }: ReplyCardProps) {
 
       {/* Actions */}
       <div className="flex items-center gap-4 mt-4 pt-3 border-t border-[#ffffff]/40">
-        <button className="flex items-center gap-1.5 text-xs text-[#ffd8b8] hover:text-[#231890] transition-colors">
+        <button className="flex items-center gap-1.5 text-xs text-[#3a2a80] hover:text-[#231890] transition-colors">
           {/* TODO: Connect to upvote action */}
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
           </svg>
           {reply.upvotes} helpful
         </button>
-        <button className="text-xs text-[#ffd8b8] hover:text-[#fff0dc] transition-colors">
+        <button className="text-xs text-[#3a2a80] hover:text-[#2a1a70] transition-colors">
           {/* TODO: Connect to save/bookmark action */}
           Save
         </button>
-        <button className="text-xs text-[#ffd8b8] hover:text-red-400 transition-colors ml-auto">
+        <button className="text-xs text-[#3a2a80] hover:text-red-400 transition-colors ml-auto">
           {/* TODO: Connect to report moderation flow */}
           Report
         </button>

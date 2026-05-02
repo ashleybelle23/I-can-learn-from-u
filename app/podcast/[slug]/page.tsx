@@ -47,7 +47,7 @@ export default async function EpisodePage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/podcast"
-            className="inline-flex items-center gap-2 text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-[#3a2a80] hover:text-[#2a1a70] transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -67,8 +67,8 @@ export default async function EpisodePage({
                 <span className="text-xs text-[#231890] font-semibold tracking-wide uppercase">
                   Season {episode.season} · Episode {episode.episodeNumber}
                 </span>
-                <span className="text-[#ffd8b8]">·</span>
-                <span className="text-xs text-[#ffd8b8]">
+                <span className="text-[#3a2a80]">·</span>
+                <span className="text-xs text-[#3a2a80]">
                   {new Date(episode.publishedAt).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
@@ -77,7 +77,7 @@ export default async function EpisodePage({
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl font-bold text-[#ffffff] leading-tight mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#1a1060] leading-tight mb-4">
                 {episode.title}
               </h1>
 
@@ -95,15 +95,15 @@ export default async function EpisodePage({
 
             {/* Description */}
             <div className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-6">
-              <h2 className="text-sm font-semibold text-[#fff0dc] mb-4">About this episode</h2>
+              <h2 className="text-sm font-semibold text-[#2a1a70] mb-4">About this episode</h2>
               <p className="text-[#231890] leading-relaxed">{episode.description}</p>
             </div>
 
             {/* Guest bio */}
             <div className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-6">
-              <h2 className="text-sm font-semibold text-[#fff0dc] mb-4">About {episode.guest}</h2>
+              <h2 className="text-sm font-semibold text-[#2a1a70] mb-4">About {episode.guest}</h2>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-[#fff0e8] flex items-center justify-center text-lg font-semibold text-[#fff0dc] flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-[#fff0e8] flex items-center justify-center text-lg font-semibold text-[#2a1a70] flex-shrink-0">
                   {episode.guest.charAt(0)}
                 </div>
                 <p className="text-[#231890] leading-relaxed">{episode.guestBio}</p>
@@ -136,8 +136,8 @@ export default async function EpisodePage({
 
             {/* Share invitation */}
             <div className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-5">
-              <p className="text-sm font-semibold text-[#fff0dc] mb-3">Did this resonate?</p>
-              <p className="text-xs text-[#ffd8b8] leading-relaxed mb-4">
+              <p className="text-sm font-semibold text-[#2a1a70] mb-3">Did this resonate?</p>
+              <p className="text-xs text-[#3a2a80] leading-relaxed mb-4">
                 Join the community to discuss this episode, share what moved you, or ask questions.
               </p>
               <Link

@@ -25,7 +25,7 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
                product.category === 'Books & Learning' ? '📚' :
                product.category === 'Rest & Nervous System' ? '🌙' : '⬡'}
             </div>
-            <p className="text-xs text-[#ffd8b8]">
+            <p className="text-xs text-[#3a2a80]">
               {/* TODO: Replace with real product image from /public/products/ */}
               Image placeholder
             </p>
@@ -34,16 +34,16 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
 
         <div className="space-y-2">
           <Tag>{product.category}</Tag>
-          <h3 className="text-sm font-semibold text-[#ffffff] group-hover:text-[#231890] transition-colors leading-snug">
+          <h3 className="text-sm font-semibold text-[#1a1060] group-hover:text-[#231890] transition-colors leading-snug">
             {product.name}
           </h3>
-          <p className="text-xs text-[#ffd8b8] leading-relaxed line-clamp-2">{product.description}</p>
+          <p className="text-xs text-[#3a2a80] leading-relaxed line-clamp-2">{product.description}</p>
           <p className="text-xs text-[#231890] flex items-center gap-1">
             <span>◈</span> {product.origin}
           </p>
           <div className="flex items-center justify-between pt-2">
             <span className="text-base font-bold text-gradient-gold">${product.price}</span>
-            <span className="text-xs px-2.5 py-1 rounded-lg bg-[#fff0e8]/60 text-[#fff0dc]">
+            <span className="text-xs px-2.5 py-1 rounded-lg bg-[#fff0e8]/60 text-[#2a1a70]">
               View →
             </span>
           </div>
@@ -71,17 +71,17 @@ export function ProductCard({ product, featured = false }: ProductCardProps) {
       </div>
 
       <div>
-        <p className="text-xs text-[#ffd8b8] mb-1">{product.category}</p>
-        <h3 className="text-sm font-semibold text-[#ffffff] group-hover:text-[#231890] transition-colors leading-snug mb-1">
+        <p className="text-xs text-[#3a2a80] mb-1">{product.category}</p>
+        <h3 className="text-sm font-semibold text-[#1a1060] group-hover:text-[#231890] transition-colors leading-snug mb-1">
           {product.name}
         </h3>
-        <p className="text-xs text-[#ffd8b8] mb-2 line-clamp-2">{product.description}</p>
+        <p className="text-xs text-[#3a2a80] mb-2 line-clamp-2">{product.description}</p>
         <p className="text-xs text-[#231890] mb-3 line-clamp-1">from {product.origin}</p>
         <div className="flex items-center justify-between">
           <span className="text-base font-bold text-gradient-gold">${product.price}</span>
           <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" title="In stock" />
         </div>
-        <p className="text-xs text-[#ffd8b8] mt-2 leading-relaxed line-clamp-2">
+        <p className="text-xs text-[#3a2a80] mt-2 leading-relaxed line-clamp-2">
           ◈ {product.communityImpactNote}
         </p>
       </div>

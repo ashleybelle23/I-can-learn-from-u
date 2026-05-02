@@ -32,7 +32,7 @@ export function GivebackSection() {
         <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-3">
           Community Giveback
         </p>
-        <h2 className="text-2xl md:text-3xl font-bold text-[#ffffff] mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#1a1060] mb-4">
           Every purchase is a form of reciprocity
         </h2>
         <p className="text-[#231890] text-base max-w-2xl mx-auto">
@@ -47,13 +47,13 @@ export function GivebackSection() {
             className="p-5 rounded-xl border border-[#ffffff]/60 bg-[transparent]/40"
           >
             <div className="text-[#231890] text-lg mb-3">{stream.icon}</div>
-            <h3 className="text-sm font-semibold text-[#ffffff] mb-2">{stream.title}</h3>
-            <p className="text-xs text-[#ffd8b8] leading-relaxed">{stream.description}</p>
+            <h3 className="text-sm font-semibold text-[#1a1060] mb-2">{stream.title}</h3>
+            <p className="text-xs text-[#3a2a80] leading-relaxed">{stream.description}</p>
           </div>
         ))}
       </div>
 
-      <p className="text-center text-xs text-[#ffd8b8] mt-6">
+      <p className="text-center text-xs text-[#3a2a80] mt-6">
         {/* TODO: Add link to transparent impact reporting page when available */}
         Impact reports and fund allocation details published quarterly.
       </p>

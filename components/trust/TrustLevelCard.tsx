@@ -35,7 +35,7 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
           <h3 className="text-lg font-bold" style={{ color: config.color }}>
             {config.level}
           </h3>
-          <p className="text-xs text-[#ffd8b8] mt-0.5">
+          <p className="text-xs text-[#3a2a80] mt-0.5">
             {config.minPoints.toLocaleString()}
             {config.maxPoints ? ` – ${config.maxPoints.toLocaleString()}` : '+'} points
           </p>
@@ -56,7 +56,7 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
       {/* Progress bar (only for current level) */}
       {progressPercent !== null && (
         <div className="mb-5">
-          <div className="flex justify-between text-xs text-[#ffd8b8] mb-1.5">
+          <div className="flex justify-between text-xs text-[#3a2a80] mb-1.5">
             <span>{userPoints?.toLocaleString()} pts</span>
             <span>{config.maxPoints?.toLocaleString()} pts</span>
           </div>
@@ -75,7 +75,7 @@ export function TrustLevelCard({ config, current = false, userPoints }: TrustLev
       {/* Perks */}
       <ul className="space-y-2">
         {config.perks.map((perk) => (
-          <li key={perk} className="flex items-start gap-2 text-xs text-[#ffd8b8]">
+          <li key={perk} className="flex items-start gap-2 text-xs text-[#3a2a80]">
             <span className="text-[#231890] mt-0.5">·</span>
             {perk}
           </li>

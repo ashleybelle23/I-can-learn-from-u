@@ -69,7 +69,7 @@ export default function TrustPage() {
                   key={item.action}
                   className="flex items-center justify-between p-4 rounded-xl border border-[#ffffff]/60 bg-[#fff8f0]/40"
                 >
-                  <p className="text-sm text-[#fff0dc] leading-snug">{item.action}</p>
+                  <p className="text-sm text-[#2a1a70] leading-snug">{item.action}</p>
                   <span className="text-xs font-semibold text-[#34d399] ml-4 flex-shrink-0">
                     {item.points}
                   </span>
@@ -116,7 +116,7 @@ export default function TrustPage() {
           <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-2">
             Community badges
           </p>
-          <p className="text-sm text-[#ffd8b8] mb-8 max-w-2xl">
+          <p className="text-sm text-[#3a2a80] mb-8 max-w-2xl">
             Badges recognize specific acts of community care. They are rare by design and mean something.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -142,12 +142,12 @@ export default function TrustPage() {
                 className="rounded-2xl border border-[#ffffff]/60 bg-[#fff8f0]/40 p-5"
               >
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-[#fff0e8] flex items-center justify-center text-base font-semibold text-[#fff0dc] flex-shrink-0">
+                  <div className="w-12 h-12 rounded-full bg-[#fff0e8] flex items-center justify-center text-base font-semibold text-[#2a1a70] flex-shrink-0">
                     {user.name.charAt(0)}
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-sm font-semibold text-[#ffffff]">{user.name}</span>
+                      <span className="text-sm font-semibold text-[#1a1060]">{user.name}</span>
                     </div>
                     <TrustBadge level={user.trustLevel} />
                   </div>
@@ -158,11 +158,11 @@ export default function TrustPage() {
                 <div className="grid grid-cols-2 gap-3 text-center">
                   <div className="p-2 rounded-lg bg-[transparent]/60 border border-[#ffffff]/30">
                     <p className="text-base font-bold text-[#231890]">{user.points.toLocaleString()}</p>
-                    <p className="text-xs text-[#ffd8b8]">points</p>
+                    <p className="text-xs text-[#3a2a80]">points</p>
                   </div>
                   <div className="p-2 rounded-lg bg-[transparent]/60 border border-[#ffffff]/30">
-                    <p className="text-base font-bold text-[#fff0dc]">{user.contributions}</p>
-                    <p className="text-xs text-[#ffd8b8]">contributions</p>
+                    <p className="text-base font-bold text-[#2a1a70]">{user.contributions}</p>
+                    <p className="text-xs text-[#3a2a80]">contributions</p>
                   </div>
                 </div>
 
@@ -178,7 +178,7 @@ export default function TrustPage() {
                       </span>
                     ))}
                     {user.badges.length > 4 && (
-                      <span className="text-xs text-[#ffd8b8]">+{user.badges.length - 4}</span>
+                      <span className="text-xs text-[#3a2a80]">+{user.badges.length - 4}</span>
                     )}
                   </div>
                 )}

@@ -20,7 +20,7 @@ export function SectionHeader({
       ? 'text-gradient-gold'
       : titleGradient === 'lavender'
       ? 'text-gradient-lavender'
-      : 'text-[#ffffff]';
+      : 'text-[#1a1060]';
 
   return (
     <div className={`${centered ? 'text-center' : ''} ${className}`}>

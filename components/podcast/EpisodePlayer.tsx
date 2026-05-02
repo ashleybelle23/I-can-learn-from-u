@@ -13,7 +13,7 @@ export function EpisodePlayer({ episode }: { episode: PodcastEpisode }) {
           <p className="text-xs text-[#231890] font-semibold tracking-wide uppercase mb-1">
             Season {episode.season} · Episode {episode.episodeNumber}
           </p>
-          <h3 className="text-sm font-semibold text-[#ffffff] leading-snug">{episode.title}</h3>
+          <h3 className="text-sm font-semibold text-[#1a1060] leading-snug">{episode.title}</h3>
           <p className="text-xs text-[#231890]">with {episode.guest}</p>
         </div>
       </div>
@@ -27,14 +27,14 @@ export function EpisodePlayer({ episode }: { episode: PodcastEpisode }) {
         </div>
 
         {/* Time */}
-        <div className="flex justify-between text-xs text-[#ffd8b8]">
+        <div className="flex justify-between text-xs text-[#3a2a80]">
           <span>0:00</span>
           <span>{episode.duration}</span>
         </div>
 
         {/* Controls */}
         <div className="flex items-center justify-center gap-4">
-          <button className="p-2 text-[#ffd8b8] hover:text-[#fff0dc] transition-colors" aria-label="Rewind 15 seconds">
+          <button className="p-2 text-[#3a2a80] hover:text-[#2a1a70] transition-colors" aria-label="Rewind 15 seconds">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
             </svg>
@@ -49,7 +49,7 @@ export function EpisodePlayer({ episode }: { episode: PodcastEpisode }) {
             </svg>
           </button>
 
-          <button className="p-2 text-[#ffd8b8] hover:text-[#fff0dc] transition-colors" aria-label="Fast forward 15 seconds">
+          <button className="p-2 text-[#3a2a80] hover:text-[#2a1a70] transition-colors" aria-label="Fast forward 15 seconds">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
             </svg>
@@ -57,7 +57,7 @@ export function EpisodePlayer({ episode }: { episode: PodcastEpisode }) {
         </div>
       </div>
 
-      <p className="text-center text-xs text-[#ffd8b8] mt-4 italic">
+      <p className="text-center text-xs text-[#3a2a80] mt-4 italic">
         Audio player — connect your podcast host here
       </p>
     </div>

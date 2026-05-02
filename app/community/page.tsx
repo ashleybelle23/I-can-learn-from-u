@@ -25,8 +25,8 @@ export default function CommunityPage() {
             description="This is peer support — people who have walked through hard things showing up for others walking through them now. Not prescriptions. Presence."
           />
           <div className="mt-6 p-4 rounded-xl border border-[#231890]/25 bg-[#231890]/06 max-w-2xl">
-            <p className="text-sm text-[#fff0dc] leading-relaxed">
-              <strong className="text-[#ffffff]">Important:</strong> This community provides peer support, not professional mental health care. If you or someone you know is in immediate danger, please call 911 or 988 (Suicide &amp; Crisis Lifeline).
+            <p className="text-sm text-[#2a1a70] leading-relaxed">
+              <strong className="text-[#1a1060]">Important:</strong> This community provides peer support, not professional mental health care. If you or someone you know is in immediate danger, please call 911 or 988 (Suicide &amp; Crisis Lifeline).
             </p>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function CommunityPage() {
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#231890] mb-1">
                 Share your situation
               </p>
-              <p className="text-sm text-[#ffd8b8] mb-5">
+              <p className="text-sm text-[#3a2a80] mb-5">
                 The community is here. You don&apos;t have to carry this alone.
               </p>
               <PostForm />
@@ -82,8 +82,8 @@ export default function CommunityPage() {
 
             {/* Community guidelines */}
             <div className="rounded-2xl border border-[#ffffff]/40 bg-[#fff8f0]/30 p-5">
-              <p className="text-xs font-semibold text-[#fff0dc] mb-3">Community values</p>
-              <ul className="space-y-2 text-xs text-[#ffd8b8]">
+              <p className="text-xs font-semibold text-[#2a1a70] mb-3">Community values</p>
+              <ul className="space-y-2 text-xs text-[#3a2a80]">
                 {[
                   "Speak from your own experience",
                   "Witness first, advise second",
@@ -100,7 +100,7 @@ export default function CommunityPage() {
               </ul>
               <Link
                 href="/resources#guidelines"
-                className="mt-4 block text-xs text-[#231890] hover:text-[#fff0dc] transition-colors"
+                className="mt-4 block text-xs text-[#231890] hover:text-[#2a1a70] transition-colors"
               >
                 Read full community guidelines →
               </Link>

@@ -16,15 +16,15 @@ interface ButtonProps {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    'bg-gradient-to-r from-[#231890] to-[#231890] text-[transparent] font-semibold hover:opacity-90 active:scale-[0.98]',
+    'bg-[#231890] text-white font-semibold shadow-lg hover:bg-[#1a1270] active:scale-[0.98]',
   secondary:
-    'bg-[#fff0e8] text-[#ffffff] border border-[#ffffff] hover:bg-[#ffffff] active:scale-[0.98]',
+    'bg-white/25 text-[#1a1060] border border-[#1a1060]/30 font-medium hover:bg-white/40 active:scale-[0.98]',
   ghost:
-    'text-[#fff0dc] hover:text-[#ffffff] hover:bg-[#fff8f0] active:scale-[0.98]',
+    'text-[#1a1060] hover:text-[#231890] hover:bg-white/20 active:scale-[0.98]',
   outline:
-    'text-[#fff0dc] border border-[#ffffff] hover:border-[#231890] hover:text-[#ffffff] active:scale-[0.98]',
+    'text-[#1a1060] border border-[#1a1060]/50 font-medium hover:bg-[#231890] hover:text-white hover:border-[#231890] active:scale-[0.98]',
   danger:
-    'bg-red-900/40 text-red-300 border border-red-800/40 hover:bg-red-900/60 active:scale-[0.98]',
+    'bg-red-600/20 text-red-800 border border-red-500/40 font-medium hover:bg-red-600/30 active:scale-[0.98]',
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

@@ -32,11 +32,11 @@ export function Footer() {
               <span className="text-[#231890] text-lg font-bold">I Can Learn</span>
               <span className="text-[#231890] text-lg font-light">From You</span>
             </div>
-            <p className="text-[#ffd8b8] text-sm leading-relaxed">
+            <p className="text-[#3a2a80] text-sm leading-relaxed">
               A living community built on the belief that every person carries wisdom worth sharing and a story worth hearing.
             </p>
             <div className="mt-6 p-3 rounded-xl bg-[#fff8f0]/60 border border-[#ffffff]/40">
-              <p className="text-xs text-[#ffd8b8] leading-relaxed">
+              <p className="text-xs text-[#3a2a80] leading-relaxed">
                 This is a peer support community, not a substitute for professional mental health care or emergency services.
               </p>
             </div>
@@ -53,7 +53,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-[#ffd8b8] hover:text-[#fff0dc] transition-colors"
+                      className="text-sm text-[#3a2a80] hover:text-[#2a1a70] transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -66,12 +66,12 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-[#ffffff]/40 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-[#ffd8b8]">
+          <p className="text-xs text-[#3a2a80]">
             © 2024 I Can Learn From You. Built with care.
           </p>
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[#231890] animate-pulse" />
-            <span className="text-xs text-[#ffd8b8]">
+            <span className="text-xs text-[#3a2a80]">
               A portion of every store purchase supports source communities.
             </span>
           </div>
